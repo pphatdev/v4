@@ -101,22 +101,6 @@ interface Menu {
 
 
 export const Header = () => {
-
-    const headerVariants: Variants = {
-        top: {
-            // backgroundColor: "rgba(17, 17, 17, 0.8)",
-            // borderBottomColor: "rgba(55, 65, 81, 0.5)",
-            position: 'fixed',
-            boxShadow: 'none',
-        },
-        scrolled: {
-            // backgroundColor: "rgba(17, 17, 17, 0.95)",
-            // borderBottomColor: "rgba(75, 85, 99, 0.7)",
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-            position: 'fixed'
-        }
-    };
-
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -139,91 +123,6 @@ export const Header = () => {
     ];
 
     return (
-        <motion.header
-            variants={headerVariants}
-            initial="top"
-            animate={isScrolled ? "scrolled" : "top"}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="w-full md:px-10 sticky top-0 z-30 backdrop-blur-sm bg-background/10 border-b"
-        >
-            <nav className="flex justify-between items-center px-4 py-2 max-w-screen-xl mx-auto md:h-[70px]">
-                <div className="flex items-center flex-shrink-0">
-                    <Logo />
-                </div>
-
-                <div className="hidden md:flex items-center justify-center flex-grow space-x-6 lg:space-x-8 px-4">
-                    {/* Main Navigation Links */}
-
-                    {menus.map((menu) => (
-                        <div
-                            key={menu.name}
-                            className="relative"
-                            onMouseEnter={() => menu.dropdown && setOpenDropdown(menu.name)}
-                            onMouseLeave={() => setOpenDropdown(null)}
-                        >
-                            <NavLink href={menu.href} hasDropdown={!!menu.dropdown}>
-                                {menu.name}
-                            </NavLink>
-                            {menu.dropdown && (
-                                <DropdownMenu isOpen={openDropdown === menu.name}>
-                                    {menu.dropdown.map((item) => (
-                                        <DropdownItem key={item.name} href={item.href} icon={item.icon}>
-                                            {item.name}
-                                        </DropdownItem>
-                                    ))}
-                                </DropdownMenu>
-                            )}
-                        </div>
-                    ))}
-                </div>
-
-                <div className="flex items-center flex-shrink-0 gap-x-2 lg:gap-6">
-                    {/* <NavLink href="#" className="hidden md:inline-block">Sign in</NavLink> */}
-
-                    <ThemeSwitch/>
-
-                    <motion.a
-                        href="#"
-                        className="bg-primary text-primary-foreground px-4 py-[6px] rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors duration-200 whitespace-nowrap"
-                        whileHover={{ scale: 1.03, y: -1 }}
-                        whileTap={{ scale: 0.97 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                    >
-                        Contact
-                    </motion.a>
-
-                    <motion.button
-                        className="md:hidden ring ring-primary text-primary bg-foreground/5 p-1.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors duration-200 whitespace-nowrap shadow-sm hover:shadow-md"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        aria-label="Toggle menu"
-                        whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
-                    >
-                        {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
-                    </motion.button>
-                </div>
-            </nav>
-
-            <AnimatePresence>
-                {isMobileMenuOpen && (
-                    <motion.div
-                        key="mobile-menu"
-                        variants={mobileMenuVariants} initial="hidden" animate="visible" exit="exit"
-                        className="md:hidden absolute top-full left-0 right-0 backdrop-blur-sm shadow-lg py-4 border-t border-gray-800/50"
-                    >
-                        <div className="flex flex-col items-center space-y-4 px-6">
-                            <NavLink href="#" onClick={() => setIsMobileMenuOpen(false)}>Product</NavLink>
-                            <NavLink href="#" onClick={() => setIsMobileMenuOpen(false)}>Customers</NavLink>
-                            <NavLink href="#" onClick={() => setIsMobileMenuOpen(false)}>Channels</NavLink>
-                            <NavLink href="#" onClick={() => setIsMobileMenuOpen(false)}>Resources</NavLink>
-                            <NavLink href="#" onClick={() => setIsMobileMenuOpen(false)}>Docs</NavLink>
-                            <NavLink href="#" onClick={() => setIsMobileMenuOpen(false)}>Pricing</NavLink>
-                            <hr className="w-full border-t border-gray-700/50 my-2" />
-                            <NavLink href="#" onClick={() => setIsMobileMenuOpen(false)}>Sign in</NavLink>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </motion.header>
-
+        <></>
     )
 }
