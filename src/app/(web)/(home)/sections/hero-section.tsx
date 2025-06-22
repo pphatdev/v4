@@ -431,7 +431,7 @@ const HomeHeroSection: React.FC = () => {
         return () => { document.body.style.overflow = 'unset'; };
     }, [isMobileMenuOpen]);
 
-    const contentDelay = 0.2;
+    const contentDelay = 0.3;
     const itemDelayIncrement = 0.1;
 
     const headlineVariants: Variants = {
