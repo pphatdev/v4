@@ -8,6 +8,18 @@ const nextConfig: NextConfig = {
                 hostname: "i.pravatar.cc",
                 port: "",
                 pathname: "/**"
+            },
+            {
+                protocol: "https",
+                hostname: "pphat.top",
+                port: "",
+                pathname: "/**"
+            },
+            {
+                protocol: "https",
+                hostname: "github.com",
+                port: "",
+                pathname: "/**"
             }
         ]
     },
