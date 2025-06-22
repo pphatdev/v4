@@ -431,7 +431,7 @@ const HomeHeroSection: React.FC = () => {
         return () => { document.body.style.overflow = 'unset'; };
     }, [isMobileMenuOpen]);
 
-    const contentDelay = 0.3;
+    const contentDelay = 0.2;
     const itemDelayIncrement = 0.1;
 
     const headlineVariants: Variants = {
@@ -482,7 +482,7 @@ const HomeHeroSection: React.FC = () => {
     return (
         <>
             <canvas ref={canvasRef} className="absolute inset-0 z-0 w-full overflow-hidden pointer-events-none opacity-80" />
-            <div className='w-full max-w-7xl flex-grow mt-20 flex flex-col items-start justify-start mx-auto px-1 md:px-14 md:pt-10 lg:px-4 h-full pb-16 relative z-10'>
+            <div className='w-full max-w-7xl sticky flex-grow mt-20 flex flex-col items-start justify-start mx-auto px-1 md:px-14 md:pt-10 lg:px-4 h-full pb-16 z-10'>
                 <div className='flex gap-5 max-lg:items-center max-lg:flex-col items-start w-full justify-between'>
                     <div className='w-full max-sm:text-center flex flex-col max-w-4xl'>
                         <Announcing className='w-full max-lg:text-center max-md:mt-10 max-sm:order-1 order-0' />
