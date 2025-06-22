@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import HomeHeroSection from "@/app/(web)/(home)/sections/hero-section";
+import { ProjectsSection } from './sections/projects';
 
 export const metadata: Metadata = {
     title: "Sophat LEAT | PPhat - Senior Frontend Developer & UI/UX Designer",
@@ -40,9 +41,6 @@ export const metadata: Metadata = {
     }
 };
 
-import { StaggerTestimonials } from '@/components/stagger-testimonials';
-
-
 export default function HomePage() {
 
     return (
@@ -51,13 +49,7 @@ export default function HomePage() {
                 <div className="fixed inset-0 z-1 pointer-events-none bg-[linear-gradient(to_bottom,transparent_0%,hsl(var(--primary-foreground))_90%),radial-gradient(ellipse_at_center,transparent_40%,hsl(var(--primary-foreground))_95%)]"></div>
 
                 <HomeHeroSection />
-
-                <section className='mx-auto w-full z-50 my-20'>
-                    <div className="w-full max-w-7xl mx-auto rounded-3xl border border-foreground/10 bg-foreground/5 backdrop-blur-[2px]">
-                        <StaggerTestimonials />
-                    </div>
-                </section>
-
+                <ProjectsSection/>
             </main>
         </>
     );
