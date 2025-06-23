@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Getting Started
 
-## Getting Started
+This project is a modern web application built with **React** and **TypeScript**, managed through npm. Follow the steps below to set up your development environment and start building.
 
-First, run the development server:
+## Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Before you begin, ensure you have the following installed on your system:
+- **Node.js** (version 16 or higher)
+- **npm** (comes with Node.js)
+- **Git** for version control
+
+## Clone Project
+
+Choose your preferred method to clone the repository:
+
+```shell
+# SSH (recommended if you have SSH keys set up)
+git clone git@github.com:pphatdev/v4.git && cd ./v4
+
+# HTTPS (works without SSH setup)
+git clone https://github.com/pphatdev/v4.git && cd ./v4
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚒️ Start Cooking
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install dependencies and launch the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```shell
+npm install && npm run dev
+```
 
-## Learn More
+This will:
+- Install all required packages and dependencies
+- Start the development server with hot-reload
+- Open your application in the browser (typically at `http://localhost:3000`)
 
-To learn more about Next.js, take a look at the following resources:
+## ⌛ Build for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+When you're ready to deploy:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```shell
+npm run build && npm start
+```
 
-## Deploy on Vercel
+This command will:
+- Create an optimized production build
+- Start the production server
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**💡 Quick Tip:** The development server includes TypeScript type checking and React Fast Refresh for an improved developer experience.
