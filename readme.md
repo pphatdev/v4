@@ -1,61 +1,51 @@
-# 👋 About Me
+# Getting Started
 
-Hello, I'm **Sophat LEAT**, and my internet name is **PPhat**. When you see `Dev` in my projects, it means "in development", and `Tech` means "About Technical".
+This project is a modern web application built with **React** and **TypeScript**, managed through npm. Follow the steps below to set up your development environment and start building.
 
-- 💼 Currently working as a **Senior Front-end Developer** at TurboTech
-- 🎨 Freelancer **UI/UX Designer**
-- 🚀 Passionate about designing and developing side projects in my free time
-- 💻 Specializing in modern web technologies and user experience design
+## Prerequisites
 
-## 🛠️ Tech Stack
-- **Frontend:** HTML, JavaScript, React, Next.js, TypeScript, Tailwind CSS
-- **Backend:** Node.js, Express, Hono, PostgreSQL, Laravel
-- **Design:** Figma, Adobe XD
-- **Tools:** Git, VS Code, Netlify, Vercel, Ubuntu, Cloudflare
+Before you begin, ensure you have the following installed on your system:
+- **Node.js** (version 16 or higher)
+- **npm** (comes with Node.js)
+- **Git** for version control
 
-## 🎯 What I Do
+## Clone Project
 
-### Frontend Development
-I craft responsive, performant web applications with a focus on user experience. My expertise spans from building interactive UIs to optimizing web performance and accessibility.
+Choose your preferred method to clone the repository:
 
-### UI/UX Design
-As a freelancer, I help businesses create intuitive and visually appealing digital experiences. I believe great design bridges the gap between user needs and business goals.
+```shell
+# SSH (recommended if you have SSH keys set up)
+git clone git@github.com:pphatdev/v4.git && cd ./v4
 
-### Side Projects
-I'm constantly building and experimenting with new technologies. Check out my portfolio for projects ranging from productivity tools to creative web experiments.
+# HTTPS (works without SSH setup)
+git clone https://github.com/pphatdev/v4.git && cd ./v4
+```
 
-## 🌟 Background & Journey
+## ⚒️ Start Cooking
 
-Started my journey in web development 5+ years ago, beginning with HTML/CSS and gradually diving deeper into modern JavaScript frameworks. My design background helps me bridge the gap between technical implementation and user-centered design.
+Install dependencies and launch the development server:
 
-I'm passionate about:
-- 🎨 Creating pixel-perfect, accessible interfaces
-- ⚡ Performance optimization and best practices
-- 🧠 Learning emerging technologies and design trends
-- 🤝 Collaborating with cross-functional teams
-- 📚 Sharing knowledge through mentoring and writing
+```shell
+npm install && npm run dev
+```
 
-## 🎨 Current Focus
+This will:
+- Install all required packages and dependencies
+- Start the development server with hot-reload
+- Open your application in the browser (typically at `http://localhost:3000`)
 
-- Building scalable design systems
-- Exploring AI integration in web applications
-- Contributing to open-source projects
-- Writing technical articles and tutorials
+## ⌛ Build for Production
 
-## 🎮 When I'm Not Coding
+When you're ready to deploy:
 
-- 📚 Reading tech blogs and design inspiration
-- 🎵 Listening to music while coding (Khmer 60s-70s Song is my favorite)
-- 🎬 Watching tech talks and design documentaries
-- ☕ Exploring new coffee shops for remote work sessions
+```shell
+npm run build && npm start
+```
 
-## 🌐 Let's Connect
-
-I'm always interested in discussing new opportunities, collaborating on exciting projects, or just chatting about technology and design.
-
-- 💼 [LinkedIn](https://linkedin.com/in/pphatdev)
-- 📧 [Email](mailto:info.sophat@gmail.com)
-- 🌐 [Portfolio](https://pphat.top) | [v1](https://sophat.top) | [v2](https://v2.sophat.top) | [v3](https://pphat.top) | [v4](https://v4.sophat.top)
-- 💻 [GitHub](https://github.com/pphatdev)
+This command will:
+- Create an optimized production build
+- Start the production server
 
 ---
+
+**💡 Quick Tip:** The development server includes TypeScript type checking and React Fast Refresh for an improved developer experience.
