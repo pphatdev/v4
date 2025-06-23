@@ -557,7 +557,7 @@ const HomeHeroSection: React.FC = () => {
                             I am also a big fan of open-source projects and I enjoy contributing to the community. I believe that sharing knowledge is the key to success in this field.
                         </motion.p>
 
-                        <ThemeToggle/>
+                        <ThemeToggle className="my-4" />
 
                         <motion.div
                             variants={{
