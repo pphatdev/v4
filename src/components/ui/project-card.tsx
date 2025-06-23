@@ -18,7 +18,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
 
     return (
         <div
-            className={cn("col-span-1 sticky max-sm:top-0 top-4 duration-300 hover:translate-y-1 overflow-hidden max-sm:rounded-none max-lg:bg-background bg-foreground/5 group font-sans rounded-[18px] p-4 mb-4 ring-1 max-lg:ring-border ring-foreground/10 hover:ring-primary hover:ring-2 transition-all ease-in-out flex flex-col h-full", className)}
+            className={cn("col-span-1 sticky max-sm:top-0 top-4 duration-300 hover:translate-y-1 overflow-hidden max-sm:rounded-none bg-background group font-sans rounded-[18px] p-4 mb-4 ring-1 ring-border hover:ring-primary hover:ring-2 transition-all ease-in-out flex flex-col h-full", className)}
             role="article"
             tabIndex={-1}>
 
@@ -35,6 +35,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
                     {project.source.map((source, index) => (
                         <Link
                             key={index}
+                            target="_blank"
                             href={source.url}
                             aria-label={source.type === 'demo' ? 'View live demo' : 'View source code'}
                             title={source.type === 'demo' ? 'View live demo' : 'View source code'}
