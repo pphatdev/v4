@@ -1,39 +1,32 @@
-name: Deploy to Production
+name: Deploy to Server via SSH
 
 on:
   push:
     branches:
-      - master  # Deploy only on push to main branch
+      - master
 
 jobs:
   deploy:
-    name: Deploy via SSH
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.8.0
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Set up SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Copy .env or secrets if needed
-      run: |
-        # Optional: copy environment files if needed
-        # echo "${{ secrets.ENV_FILE }}" > .env
-        echo "No env file to copy"
-
-    - name: Deploy and Restart
-      env:
-        SSH_USER: ${{ secrets.SSH_USERNAME }}
-        SSH_HOST: ${{ secrets.SSH_HOST }}
-      run: |
-        ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << 'EOF'
-          cd /var/www/sophat.top/v4.sophat.top
-          git pull
-          npm install
-          npm run build
-          pm2 restart 1
-        EOF
+      - name: Run deployment commands on server
+        env:
+          SSH_USER: ${{ secrets.SSH_USERNAME }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << 'EOF'
+            cd /var/www/sophat.top/v4.sophat.top
+            git pull
+            npm install
+            npm run build
+            pm2 restart 1
+          EOF
