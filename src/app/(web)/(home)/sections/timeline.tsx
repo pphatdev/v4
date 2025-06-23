@@ -104,7 +104,7 @@ export const AboutTimeline = () => {
     return (
         <section className='mx-auto max-w-6xl w-full sm:px-4 z-50 my-10'>
             <h1 className="w-full py-3 px-4 backdrop-blur-sm sticky z-50 top-0 max-md:text-3xl text-4xl text-start tracking-tighter font-bold font-sans">
-                Worked <span className="text-left bg-background bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">timeline</span>
+                Work <span className="text-left bg-background bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">Experience</span>
             </h1>
 
             <div className="w-full">
