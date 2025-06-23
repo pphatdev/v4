@@ -1,0 +1,36 @@
+name: SSH Login with Password
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: ${{ secrets.SSH_USERNAME }}
+        required: true
+        type: string
+      port:
+        description: 'SSH Port'
+        required: false
+        default: '22'
+        type: string
+      command:
+        description: 'Command to run on remote host'
+        required: false
+        default: 'echo "Login successful"'
+        type: string
+
+jobs:
+  ssh-login:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Run SSH command using password
+        env:
+          SSHPASS: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          sshpass -e ssh -o StrictHostKeyChecking=no -p "${{ github.event.inputs.port }}" "${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}" "${{ github.event.inputs.command }}"
