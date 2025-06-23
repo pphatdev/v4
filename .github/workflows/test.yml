@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       username:
-        description: ${{ secrets.SSH_USERNAME }}
+        description: 'SSH User'
         required: true
         type: string
       port:
