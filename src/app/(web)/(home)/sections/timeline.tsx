@@ -102,33 +102,37 @@ export const AboutTimeline = () => {
     ]
 
     return (
-        <section className='mx-auto max-w-5xl w-full z-50 my-20'>
-            <h1 className="w-full py-3 px-4 backdrop-blur-sm sticky z-50 top-0 max-md:text-3xl text-5xl tracking-tighter font-bold font-sans">
+        <section className='mx-auto max-w-6xl w-full sm:px-4 z-50 my-10'>
+            <h1 className="w-full py-3 px-4 backdrop-blur-sm sticky z-50 top-0 max-md:text-3xl text-4xl text-start tracking-tighter font-bold font-sans">
                 Worked <span className="text-left bg-background bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">timeline</span>
             </h1>
-            <div className="relative max-w-7xl mx-auto max-sm:p-4 sm:pb-12 sm:ml-[calc(2rem+1px)] mt-10 md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]">
-                <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-foreground/20 sm:block"> </div>
-                <div className="space-y-12">
-                    {experiences.map(({ works, title, companyLogo }, index) => (
-                        <div key={index} className="flex flex-col">
-                            <div className="flex gap-2 items-center pb-10 md:-translate-x-16">
-                                {companyLogo && <Image src={`/${companyLogo}`} alt="Avatar" className="object-cover size-6 bg-background border rounded-md" width={32} height={32} />}
-                                <h2 className="text-xl font-bold text-foreground/80"> {title} </h2>
+
+            <div className="w-full">
+                <div className="relative max-sm:p-4 sm:pb-12 sm:ml-[calc(2rem+1px)] mt-10 md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-68rem))]">
+                    <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-foreground/20 sm:block"> </div>
+                    <div className="space-y-12">
+                        {experiences.map(({ works, title, companyLogo }, index) => (
+                            <div key={index} className="flex flex-col">
+                                <div className="flex gap-2 items-center pb-10 md:-translate-x-16">
+                                    {companyLogo && <Image src={`/${companyLogo}`} alt="Avatar" className="object-cover size-6 bg-background border rounded-md" width={32} height={32} />}
+                                    <h2 className="text-xl font-bold text-foreground/80"> {title} </h2>
+                                </div>
+                                <div className="flex flex-col gap-5 space-y-12">
+                                    {works.map((item, index) => (
+                                        <ExperienceCard
+                                            key={index}
+                                            date={item.date}
+                                            title={item.title}
+                                            skills={item.skills}
+                                        />
+                                    ))}
+                                </div>
                             </div>
-                            <div className="flex flex-col gap-5 space-y-12">
-                                {works.map((item, index) => (
-                                    <ExperienceCard
-                                        key={index}
-                                        date={item.date}
-                                        title={item.title}
-                                        skills={item.skills}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
+
         </section>
     )
 }
