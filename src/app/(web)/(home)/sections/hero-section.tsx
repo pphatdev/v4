@@ -482,8 +482,8 @@ const HomeHeroSection: React.FC = () => {
 
     return (
         <>
-            <canvas ref={canvasRef} className="absolute inset-0 z-0 w-full overflow-hidden pointer-events-none opacity-80" />
-            <div className='w-full max-w-7xl sticky flex-grow mt-20 flex flex-col items-start justify-start mx-auto px-1 md:px-14 md:pt-10 lg:px-4 h-full pb-16 z-10'>
+            <canvas ref={canvasRef} className="absolute inset-0 z-10 w-full overflow-hidden pointer-events-none opacity-80" />
+            <div className='w-full max-w-6xl sticky flex-grow mt-10 flex flex-col items-start justify-start mx-auto px-1 md:px-14 md:pt-10 lg:px-4 h-full pb-14 z-10'>
                 <div className='flex gap-5 max-lg:items-center max-lg:flex-col items-start w-full justify-between'>
                     <div className='w-full max-sm:text-center flex flex-col max-w-4xl'>
                         <Announcing className='w-full max-lg:text-center max-md:mt-10 max-sm:order-1 order-0' />
@@ -492,7 +492,7 @@ const HomeHeroSection: React.FC = () => {
                             variants={headlineVariants}
                             initial="hidden"
                             animate="visible"
-                            className="max-sm:text-3xl inline-flex justify-start items-center w-full text-4xl lg:text-5xl xl:text-6xl font-black text-foreground max-md:text-left text-left leading-tight max-w-4xl"
+                            className="max-sm:text-3xl inline-flex max-md:justify-center justify-start items-center w-full text-4xl lg:text-5xl xl:text-6xl font-black text-foreground max-md:text-left text-left leading-tight max-w-4xl"
                         >
                             {`Hello, I'm`}
                             <RotatingText
