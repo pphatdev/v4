@@ -6,9 +6,11 @@ import { motion } from 'framer-motion';
 import { projects as data } from "../data/projects";
 
 const Projects: React.FC = () => {
-    return (data.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-    )))
+    return (
+        <div className="w-full max-w-6xl mx-auto max-sm:p-0 px-4 pb-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-7 stick">
+            {data.map((project, index) => (<ProjectCard key={index} project={project} />))}
+        </div>
+    )
 }
 
 export const ProjectsSection = () => {
@@ -16,12 +18,30 @@ export const ProjectsSection = () => {
         <section className='mx-auto w-full z-50 my-20'>
             <motion.div
                 variants={{
-                    hidden: { opacity: 0, y: 10 },
-                    visible: { opacity: 0.9, y: 0, transition: { duration: 0.5, delay: 0.5 * 2 } }
+                    hidden: { opacity: 0, y: 30 },
+                    visible: {
+                        opacity: 0.9,
+                        y: 0,
+                        transition: {
+                            duration: 0.6,
+                            delay: 0.4,
+                            staggerChildren: 0.1
+                        }
+                    }
                 }}
                 initial="hidden"
                 animate="visible"
-                className="w-full max-w-7xl mx-auto sm:rounded-3xl max-sm:p-0 p-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sticky max-sm:border-y sm:border border-foreground/10 bg-foreground/5 backdrop-blur-[2px]">
+                className="w-full mx-auto max-sm:p-0 z-50 p-5 gap-4 sticky shadow-2xl shadow-primary/5 bg-card backdrop-blur-[2px]">
+                <motion.h1
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        visible: { opacity: 0.9, y: 0, transition: { duration: 0.6, delay: 0.2 } }
+                    }}
+                    initial="hidden"
+                    animate="visible"
+                    className="w-full py-3 px-4 mb-10 mx-auto text-start max-w-6xl sticky z-50 top-0 max-md:text-3xl text-4xl tracking-tighter font-bold font-sans">
+                    Contri<span className="text-left bg-background bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">utes </span>
+                </motion.h1>
                 <Projects />
             </motion.div>
         </section>
