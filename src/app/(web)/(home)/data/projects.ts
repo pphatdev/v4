@@ -1,0 +1,115 @@
+export const projects = [
+    {
+        id: "1",
+        image: "/assets/projects/king-mart.shop.png",
+        title: "King Mart eCommerce",
+        description: "KING MART is one-stop shopping for customers, we are committed to establishing retail stores with a digital platform where customers can get high-quality products with competitive price.",
+        published: true,
+        tags: ["eCommerce", "Laravel", "JavaScript", "Tailwind CSS"],
+        source: [
+            { url: "https://king-mart.shop", name: "Live", type: "demo" }
+        ],
+        authors: [
+            { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" },
+            { name: "Hoeun Pichet", profile: "https://github.com/HoeunPichet.png", url: "https://github.com/HoeunPichet" }
+        ],
+        languages: ["Laravel", "JavaScript", "Tailwind CSS"]
+    },
+    {
+        id: "2",
+        image: "/assets/projects/red-ant-express.com.kh.png",
+        title: "Red Ant Express Cambodia",
+        description: "Red Ant Express Co., Ltd. was established in 2022 based on the Certificate of Incorporation, dated on 11 January 2022, issued by the Ministry of Commerce. We intend to become the most respected and trustworthy delivery company in Cambodia. ",
+        published: true,
+        tags: ["eCommerce", "Laravel", "JavaScript", "Tailwind CSS"],
+        source: [
+            { url: "https://red-ant-express.com.kh", name: "Live", type: "demo" }
+        ],
+        authors: [
+            { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" },
+            { name: "Hoeun Pichet", profile: "https://github.com/HoeunPichet.png", url: "https://github.com/HoeunPichet" }
+        ],
+        languages: ["Laravel", "JavaScript", "Tailwind CSS"]
+    },
+    {
+        id: "3",
+        image: "/assets/projects/elibraryofkhmer.blogspot.com.png",
+        title: "eLibrary of Nintrea",
+        description: "A website that gathers various types of information (text, images, audio, and video) for sharing and supporting the study and teaching of the Khmer language, intended for students, parents, and Khmer language teachers.",
+        published: true,
+        tags: ["Blogspot", "XML", "JavaScript"],
+        source: [
+            { url: "https://elibraryofkhmer.blogspot.com", name: "Live", type: "demo" }
+        ],
+        authors: [
+            { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" }
+        ],
+        languages: ["XML", "JavaScript"]
+    },
+    {
+        id: "4",
+        image: "/assets/projects/nintrea.top.png",
+        title: "Nintrea Website",
+        description: "A website for searching and reading books online. It is a web application that allows users to search for books, read them online. It is designed to be user-friendly and easy to navigate, making it a great resource for anyone looking to read books online.",
+        published: true,
+        tags: ["NextJs", "TypeScript", "Tailwind CSS"],
+        source: [
+            { url: "https://github.com/nintrealab/nintrea.website", name: "Live", type: "source" },
+            { url: "https://nintrea.top", name: "Live", type: "demo" }
+        ],
+        authors: [
+            { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" },
+            { name: "Navy MEAN", profile: "https://github.com/vyniivaa-dev.png", url: "https://github.com/vyniivaa-dev" },
+            { name: "Sithuch CHHEM", profile: "https://github.com/sithuch.png", url: "https://github.com/sithuch" }
+        ],
+        languages: ["NextJs", "TypeScript", "Tailwind CSS"]
+    },
+    {
+        id: "5",
+        image: "/assets/projects/elibrary.nintrea.top.png",
+        title: "eLibrary of Nintrea (Incoming)",
+        description: "A website for searching and reading books online. It is a web application that allows users to search for books, read them online. It is designed to be user-friendly and easy to navigate, making it a great resource for anyone looking to read books online.",
+        published: true,
+        tags: ["NextJs", "TypeScript", "Tailwind CSS"],
+        source: [
+            { url: "https://github.com/nintrealab/elibrary", name: "Live", type: "source" }
+        ],
+        authors: [
+            { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" }
+        ],
+        languages: ["NextJs", "TypeScript", "Tailwind CSS"]
+    },
+    {
+        id: "6",
+        image: "/assets/projects/blog-leatsophat.vercel.app.png",
+        title: "My Personal Blog",
+        description: "A personal blog where I share my thoughts, experiences, and knowledge on various topics related to web development, design, and technology.",
+        published: true,
+        tags: ["NextJs", "JavaScript", "Tailwind CSS"],
+        source: [
+            { url: "https://github.com/pphatdev/blog", name: "Live", type: "source" },
+            { url: "https://blog-leatsophat.vercel.app", name: "Live", type: "demo" }
+        ],
+        authors: [
+            { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" }
+        ],
+        languages: ["NextJs", "JavaScript", "Tailwind CSS"]
+    },
+    {
+        id: "7",
+        image: "/assets/projects/maskify.pphat.top.png",
+        title: "Maskify Tool App",
+        description: "Maskify Tool App is a personal utility for generating and applying custom masks to images. Easily initialize, edit, and manage image masks for your creative or practical projects.",
+        published: true,
+        tags: ["NextJs", "TypeScript", "Tailwind CSS"],
+        source: [
+            { url: "https://github.com/pphatlabs/maskify", name: "Live", type: "source" },
+            { url: "https://maskify.pphat.top", name: "Live", type: "demo" }
+        ],
+        authors: [
+            { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" },
+            { name: "Sithuch CHHEM", profile: "https://github.com/sithuch.png", url: "https://sithuch.site" },
+        ],
+        languages: ["NextJs", "TypeScript", "Tailwind CSS"]
+    },
+]

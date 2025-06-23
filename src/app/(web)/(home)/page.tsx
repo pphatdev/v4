@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import HomeHeroSection from "@/app/(web)/(home)/sections/hero-section";
 import { ProjectsSection } from './sections/projects';
-import { metadata as meta } from './meta';
+import { metadata as meta } from './data/meta';
 
 export const metadata: Metadata = meta
 
