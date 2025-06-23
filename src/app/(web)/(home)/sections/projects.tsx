@@ -59,7 +59,7 @@ export const ProjectsSection = () => {
             title: "Nintrea Website",
             description: "A website for searching and reading books online. It is a web application that allows users to search for books, read them online. It is designed to be user-friendly and easy to navigate, making it a great resource for anyone looking to read books online.",
             published: true,
-            tags: ["NextJs", "JavaScript", "Tailwind CSS"],
+            tags: ["NextJs", "TypeScript", "Tailwind CSS"],
             source: [
                 { url: "https://github.com/nintrealab/nintrea.website", name: "Live", type: "source" },
                 { url: "https://nintrea.top", name: "Live", type: "demo" }
@@ -69,7 +69,7 @@ export const ProjectsSection = () => {
                 { name: "Navy MEAN", profile: "https://github.com/vyniivaa-dev.png", url: "https://github.com/vyniivaa-dev" },
                 { name: "Sithuch CHHEM", profile: "https://github.com/sithuch.png", url: "https://github.com/sithuch" }
             ],
-            languages: ["NextJs", "JavaScript", "Tailwind CSS"]
+            languages: ["NextJs", "TypeScript", "Tailwind CSS"]
         },
         {
             id: "5",
@@ -77,14 +77,14 @@ export const ProjectsSection = () => {
             title: "eLibrary of Nintrea (Incoming)",
             description: "A website for searching and reading books online. It is a web application that allows users to search for books, read them online. It is designed to be user-friendly and easy to navigate, making it a great resource for anyone looking to read books online.",
             published: true,
-            tags: ["NextJs", "JavaScript", "Tailwind CSS"],
+            tags: ["NextJs", "TypeScript", "Tailwind CSS"],
             source: [
                 { url: "https://github.com/nintrealab/elibrary", name: "Live", type: "source" }
             ],
             authors: [
                 { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" }
             ],
-            languages: ["NextJs", "JavaScript", "Tailwind CSS"]
+            languages: ["NextJs", "TypeScript", "Tailwind CSS"]
         },
         {
             id: "6",
@@ -101,6 +101,23 @@ export const ProjectsSection = () => {
                 { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" }
             ],
             languages: ["NextJs", "JavaScript", "Tailwind CSS"]
+        },
+        {
+            id: "7",
+            image: "/assets/projects/maskify.pphat.top.png",
+            title: "Maskify Tool App",
+            description: "Maskify Tool App is a personal utility for generating and applying custom masks to images. Easily initialize, edit, and manage image masks for your creative or practical projects.",
+            published: true,
+            tags: ["NextJs", "TypeScript", "Tailwind CSS"],
+            source: [
+                { url: "https://github.com/pphatlabs/maskify", name: "Live", type: "source" },
+                { url: "https://maskify.pphat.top", name: "Live", type: "demo" }
+            ],
+            authors: [
+                { name: "Sophat LEAT", profile: "https://github.com/pphatdev.png", url: "https://pphat.top" },
+                { name: "Sithuch CHHEM", profile: "https://github.com/sithuch.png", url: "https://sithuch.site" },
+            ],
+            languages: ["NextJs", "TypeScript", "Tailwind CSS"]
         },
     ]
     return (
