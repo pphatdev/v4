@@ -33,4 +33,5 @@ jobs:
         env:
           SSHPASS: ${{ secrets.SSH_PASSWORD }}
         run: |
-          sshpass -e ssh -o StrictHostKeyChecking=no -p "${{ github.event.inputs.port }}" "${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}" "${{ github.event.inputs.command }}"
+          sshpass -p '${{ secrets.SSH_PASSWORD }}' ssh -o StrictHostKeyChecking=no -p 22 ${{ github.event.inputs.username }}@${{ secrets.SSH_HOST }} "echo 'Login successful'"
+          # sshpass -e ssh -o StrictHostKeyChecking=no -p "${{ github.event.inputs.port }}" "${{ github.event.inputs.username }}@${{ secrets.SSH_HOST }}" "${{ github.event.inputs.command }}"
