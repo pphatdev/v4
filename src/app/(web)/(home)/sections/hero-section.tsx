@@ -6,6 +6,7 @@ import { Profile } from '@/app/(web)/(home)/sections/profile';
 import { MagneticArea } from '@/components/magnetic-aria';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { ThemeToggle } from '@/components/ui/theme-switch';
 
 interface RotatingTextRef {
     next: () => void;
@@ -491,7 +492,7 @@ const HomeHeroSection: React.FC = () => {
                             variants={headlineVariants}
                             initial="hidden"
                             animate="visible"
-                            className="max-sm:text-3xl inline-flex justify-center items-center w-full text-4xl lg:text-5xl xl:text-6xl md:w-fit font-black text-foreground max-md:text-center text-left leading-tight max-w-4xl"
+                            className="max-sm:text-3xl inline-flex justify-start items-center w-full text-4xl lg:text-5xl xl:text-6xl font-black text-foreground max-md:text-left text-left leading-tight max-w-4xl"
                         >
                             {`Hello, I'm`}
                             <RotatingText
@@ -555,6 +556,8 @@ const HomeHeroSection: React.FC = () => {
                         >
                             I am also a big fan of open-source projects and I enjoy contributing to the community. I believe that sharing knowledge is the key to success in this field.
                         </motion.p>
+
+                        <ThemeToggle className="my-4" />
 
                         <motion.div
                             variants={{

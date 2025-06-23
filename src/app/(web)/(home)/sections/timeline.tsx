@@ -102,11 +102,11 @@ export const AboutTimeline = () => {
     ]
 
     return (
-        <section className="max-w-7xl mx-auto px-4 lg:px-6 z-50">
-            <h1 className="max-md:mb-3 w-full py-3 sticky z-50 top-0 max-md:text-3xl text-5xl tracking-tighter font-bold font-sans">
-                Exper<span className="text-left bg-background  bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">ience</span>
+        <section className='mx-auto max-w-5xl w-full z-50 my-20'>
+            <h1 className="w-full py-3 px-4 backdrop-blur-sm sticky z-50 top-0 max-md:text-3xl text-5xl tracking-tighter font-bold font-sans">
+                Worked <span className="text-left bg-background bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">timeline</span>
             </h1>
-            <div className="relative sm:pb-12 sm:ml-[calc(2rem+1px)] mt-10 md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]">
+            <div className="relative max-w-7xl mx-auto max-sm:p-4 sm:pb-12 sm:ml-[calc(2rem+1px)] mt-10 md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]">
                 <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-foreground/20 sm:block"> </div>
                 <div className="space-y-12">
                     {experiences.map(({ works, title, companyLogo }, index) => (
