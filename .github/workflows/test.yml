@@ -1,36 +1,39 @@
-name: SSH Login with Password
+name: Deploy to Production
 
 on:
-  workflow_dispatch:
-    inputs:
-      username:
-        description: 'SSH User'
-        required: true
-        type: string
-      port:
-        description: 'SSH Port'
-        required: false
-        default: '22'
-        type: string
-      command:
-        description: 'Command to run on remote host'
-        required: false
-        default: 'echo "Login successful"'
-        type: string
+  push:
+    branches:
+      - main  # Deploy only on push to main branch
 
 jobs:
-  ssh-login:
+  deploy:
+    name: Deploy via SSH
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Install sshpass
-        run: sudo apt-get update && sudo apt-get install -y sshpass
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.8.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Run SSH command using password
-        env:
-          SSHPASS: ${{ secrets.SSH_PASSWORD }}
-        run: |
-          sshpass -p '${{ secrets.SSH_PASSWORD }}' ssh -o StrictHostKeyChecking=no -p "${{ github.event.inputs.port }}" ${{ github.event.inputs.username }}@${{ secrets.SSH_HOST }} "${{ github.event.inputs.command }}"
+    - name: Copy .env or secrets if needed
+      run: |
+        # Optional: copy environment files if needed
+        # echo "${{ secrets.ENV_FILE }}" > .env
+        echo "No env file to copy"
+
+    - name: Deploy and Restart
+      env:
+        SSH_USER: ${{ secrets.SSH_USERNAME }}
+        SSH_HOST: ${{ secrets.SSH_HOST }}
+      run: |
+        ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << 'EOF'
+          cd /var/www/sophat.top/v4.sophat.top
+          git pull
+          npm install
+          npm run build
+          pm2 restart 1
+        EOF
