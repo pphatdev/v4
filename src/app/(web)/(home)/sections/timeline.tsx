@@ -3,6 +3,7 @@
 import { ExperienceCard } from "@/components/ui/experience-card";
 import Image from "next/image";
 import React from "react";
+import { motion } from 'framer-motion';
 
 export const AboutTimeline = () => {
 
@@ -102,7 +103,13 @@ export const AboutTimeline = () => {
     ]
 
     return (
-        <section className='mx-auto max-w-6xl w-full sm:px-4 z-50 my-10'>
+        <motion.section
+            variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 0.9, y: 0, transition: { duration: 0.6, delay: 0.2 } }
+            }}
+            initial="hidden"
+            animate="visible" className='mx-auto max-w-6xl w-full sm:px-4 z-50 my-10'>
             <h1 className="w-full py-3 px-4 backdrop-blur-sm sticky z-50 top-0 max-md:text-3xl text-4xl text-start tracking-tighter font-bold font-sans">
                 Work <span className="text-left bg-background bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">Experience</span>
             </h1>
@@ -133,6 +140,6 @@ export const AboutTimeline = () => {
                 </div>
             </div>
 
-        </section>
+        </motion.section>
     )
 }
