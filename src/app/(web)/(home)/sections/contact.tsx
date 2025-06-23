@@ -10,6 +10,7 @@ import { Send, AlertCircle } from "lucide-react";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { cn } from "@/lib/utils";
 import { LoadingSpinner } from "../../../../components/ui/loading-spinner";
+import { motion } from 'framer-motion';
 
 export default function ContactSection() {
     // Form state
@@ -127,9 +128,17 @@ export default function ContactSection() {
     };
 
     return (
-        <div className="max-w-6xl z-50 w-full flex flex-col gap-5 lg:px-4 mx-auto">
+        <motion.div
+            variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 0.9, y: 0, transition: { duration: 0.6, delay: 0.2 } }
+            }}
+            initial="hidden"
+            animate="visible"
+            className="max-w-6xl z-50 w-full flex flex-col gap-5 lg:px-4 mx-auto">
 
             <h1 className="w-full py-3 max-lg:px-4 backdrop-blur-sm sticky z-50 top-0 max-md:text-3xl text-4xl text-start tracking-tighter font-bold font-sans"> Get in <span className="text-left bg-background bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]"> Touch </span></h1>
+            <p> If you have any questions, project inquiries, or just want to say hello, feel free to reach out! I'm always open to discussing new opportunities and collaborations.</p>
 
             <Card className="overflow-hidden bg-background/80 backdrop-blur-3xl relative rounded-4xl border-border/50 shadow-lg shadow-primary/5">
                 <CardContent className="p-6 sm:px-8">
@@ -272,6 +281,6 @@ export default function ContactSection() {
                     className="from-transparent via-pink-500 to-transparent"
                 />
             </Card>
-        </div>
+        </motion.div>
     );
 }
