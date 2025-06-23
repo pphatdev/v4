@@ -1,45 +1,9 @@
 import type { Metadata } from 'next';
 import HomeHeroSection from "@/app/(web)/(home)/sections/hero-section";
 import { ProjectsSection } from './sections/projects';
+import { metadata as meta } from './meta';
 
-export const metadata: Metadata = {
-    title: "Sophat LEAT | PPhat - Senior Frontend Developer & UI/UX Designer",
-    description: "I'm Sophat LEAT (PPhat), Senior Front-end Developer at TURBOTECH CO., LTD and Freelance UI/UX Designer. Specializing in React, Next.js, and modern web development.",
-    keywords: [
-        "Sophat LEAT",
-        "PPhat",
-        "Senior Frontend Developer",
-        "UI/UX Designer",
-        "React Developer",
-        "Next.js",
-        "TypeScript",
-        "Web Development",
-        "Freelance Designer"
-    ],
-    authors: [{ name: "Sophat LEAT", url: "https://pphat.top" }],
-    creator: "Sophat LEAT",
-    openGraph: {
-        title: "Sophat LEAT | PPhat - Senior Frontend Developer",
-        description: "Senior Front-end Developer at TURBOTECH CO., LTD and Freelance UI/UX Designer specializing in modern web technologies.",
-        url: "https://pphat.top",
-        siteName: "PPhat Portfolio",
-        type: "website",
-        images: [
-            {
-                url: "https://pphat.top/assets/images/og-home.jpg",
-                width: 1200,
-                height: 630,
-                alt: "Sophat LEAT - Senior Frontend Developer Portfolio"
-            }
-        ]
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Sophat LEAT | PPhat - Senior Frontend Developer",
-        description: "Senior Frontend Developer & UI/UX Designer specializing in React and Next.js",
-        creator: "@pphatdev"
-    }
-};
+export const metadata: Metadata = meta
 
 export default function HomePage() {
 
