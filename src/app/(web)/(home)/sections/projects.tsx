@@ -1,67 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ProjectCard from "@/components/ui/project-card";
 import { motion } from 'framer-motion';
-import { Project } from "@/lib/interfaces/projects";
-import { ApiResponse } from "@/lib/interfaces/api-response";
+import { projects as data } from "../data/projects";
+import { useProjects } from "@/hooks/projects";
 
 const Projects: React.FC = () => {
-    const [projects, setProjects] = useState<Project[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    useEffect(() => {
-        const fetchProjects = async () => {
-            try {
-                setLoading(true);
-                const response = await fetch('https://api.sophat.top/api/v1/projects');
-
-                if (!response.ok) {
-                    throw new Error(`Failed to fetch projects: ${response.status}`);
-                }
-
-                const data: ApiResponse = await response.json();
-
-                if (data.success && data.result) {
-                    setProjects(data.result);
-                } else {
-                    throw new Error('Invalid API response format');
-                }
-            } catch (err) {
-                setError(err instanceof Error ? err.message : 'Failed to fetch projects');
-                console.error('Error fetching projects:', err);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchProjects();
-    }, []);
-
-    if (loading) {
-        return (
-            <div className="w-full max-w-6xl mx-auto max-sm:p-0 px-4 pb-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
-                {Array.from({ length: 6 }).map((_, index) => (
-                    <div key={index} className="h-64 bg-gray-200 animate-pulse rounded-lg"></div>
-                ))}
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="w-full max-w-6xl mx-auto max-sm:p-0 px-4 pb-16 text-center">
-                <p className="text-red-500">Error loading projects: {error}</p>
-            </div>
-        );
-    }
-
     return (
         <div className="w-full max-w-6xl mx-auto max-sm:p-0 px-4 pb-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-7 stick">
-            {projects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-            ))}
+            {data.map((project, index) => (<ProjectCard key={index} project={project} />))}
         </div>
     )
 }

@@ -1,8 +1,10 @@
-export const projects = [
+import { Project } from "@/lib/interfaces/projects";
+
+export const projects: Project[] = [
     {
         id: "1",
         image: "/assets/projects/king-mart.shop.png",
-        title: "King Mart eCommerce",
+        name: "King Mart eCommerce",
         description: "KING MART is one-stop shopping for customers, we are committed to establishing retail stores with a digital platform where customers can get high-quality products with competitive price.",
         published: true,
         tags: ["eCommerce", "Laravel", "JavaScript", "Tailwind CSS"],
@@ -18,7 +20,7 @@ export const projects = [
     {
         id: "2",
         image: "/assets/projects/red-ant-express.com.kh.png",
-        title: "Red Ant Express Cambodia",
+        name: "Red Ant Express Cambodia",
         description: "Red Ant Express Co., Ltd. was established in 2022 based on the Certificate of Incorporation, dated on 11 January 2022, issued by the Ministry of Commerce. We intend to become the most respected and trustworthy delivery company in Cambodia. ",
         published: true,
         tags: ["eCommerce", "Laravel", "JavaScript", "Tailwind CSS"],
@@ -34,7 +36,7 @@ export const projects = [
     {
         id: "3",
         image: "/assets/projects/elibraryofkhmer.blogspot.com.png",
-        title: "eLibrary of Nintrea",
+        name: "eLibrary of Nintrea",
         description: "A website that gathers various types of information (text, images, audio, and video) for sharing and supporting the study and teaching of the Khmer language, intended for students, parents, and Khmer language teachers.",
         published: true,
         tags: ["Blogspot", "XML", "JavaScript"],
@@ -49,7 +51,7 @@ export const projects = [
     {
         id: "4",
         image: "/assets/projects/nintrea.top.png",
-        title: "Nintrea Website",
+        name: "Nintrea Website",
         description: "A website for searching and reading books online. It is a web application that allows users to search for books, read them online. It is designed to be user-friendly and easy to navigate, making it a great resource for anyone looking to read books online.",
         published: true,
         tags: ["NextJs", "TypeScript", "Tailwind CSS"],
@@ -67,7 +69,7 @@ export const projects = [
     {
         id: "5",
         image: "/assets/projects/elibrary.nintrea.top.png",
-        title: "eLibrary of Nintrea (Incoming)",
+        name: "eLibrary of Nintrea (Incoming)",
         description: "A website for searching and reading books online. It is a web application that allows users to search for books, read them online. It is designed to be user-friendly and easy to navigate, making it a great resource for anyone looking to read books online.",
         published: true,
         tags: ["NextJs", "TypeScript", "Tailwind CSS"],
@@ -82,7 +84,7 @@ export const projects = [
     {
         id: "6",
         image: "/assets/projects/blog-leatsophat.vercel.app.png",
-        title: "My Personal Blog",
+        name: "My Personal Blog",
         description: "A personal blog where I share my thoughts, experiences, and knowledge on various topics related to web development, design, and technology.",
         published: true,
         tags: ["NextJs", "JavaScript", "Tailwind CSS"],
@@ -98,7 +100,7 @@ export const projects = [
     {
         id: "7",
         image: "/assets/projects/maskify.pphat.top.png",
-        title: "Maskify Tool App",
+        name: "Maskify Tool App",
         description: "Maskify Tool App is a personal utility for generating and applying custom masks to images. Easily initialize, edit, and manage image masks for your creative or practical projects.",
         published: true,
         tags: ["NextJs", "TypeScript", "Tailwind CSS"],
