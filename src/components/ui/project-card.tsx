@@ -22,7 +22,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
             role="article"
             tabIndex={-1}>
 
-            <Image src={project.image} width={512} height={512} alt={project.title || ""} className="object-cover w-full aspect-video border duration-300 transition-all ease-in-out rounded-4xl" />
+            <Image src={project.image} width={512} height={512} alt={project.name || ""} className="object-cover w-full aspect-video border duration-300 transition-all ease-in-out rounded-4xl" />
 
             <div className='bg-background/30 ring-1 w-fit absolute top-4 right-4 ml-auto ring-foreground/10 justify-end flex rounded-full p-1'>
                 {project.source.map((source, index) => (
@@ -39,7 +39,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
                 ))}
             </div>
 
-            <h2 className="text-lg px-4 mt-5 z-10 font-semibold font-sans tracking-wide line-clamp-1 pb-1">{project.title}</h2>
+            <h2 className="text-lg px-4 mt-5 z-10 font-semibold font-sans tracking-wide line-clamp-1 pb-1">{project.name}</h2>
             <header className='mb-2 px-4 relative flex justify-between items-center'>
                 <div className="flex gap-2 items-center">
                     {(project?.tags ?? []).slice(0, 3).map((language, index) => (
