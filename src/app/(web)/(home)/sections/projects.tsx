@@ -3,12 +3,20 @@
 import React from "react";
 import ProjectCard from "@/components/ui/project-card";
 import { motion } from 'framer-motion';
-import { projects as data } from "../data/projects";
+import { useProjects } from "@/hooks/projects";
 
 const Projects: React.FC = () => {
+
+    const { projects, loading, error } = useProjects();
+
     return (
         <div className="w-full max-w-6xl mx-auto max-sm:p-0 px-4 pb-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-7 stick">
-            {data.map((project, index) => (<ProjectCard key={index} project={project} />))}
+
+            {loading && <p className="text-center text-gray-500">Loading projects...</p>}
+            {error && <p className="text-center text-red-500">Error: {error}</p>}
+
+            {/* If using the custom hook, uncomment the line below */}
+            {projects.map((project, index) => (<ProjectCard key={index} project={project} />))}
         </div>
     )
 }
