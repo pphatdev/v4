@@ -1,5 +1,5 @@
 /**
- * Application constants
+ * Application constant
  */
 import { config } from 'dotenv';
 config()
@@ -35,8 +35,11 @@ export const FIGMA_URL = process.env.FIGMA_URL || "https://figma.com/@PPhat";
 // Education
 export const UNIVERSITY_NAME = process.env.UNIVERSITY_NAME || "Royal University of Phnom Penh";
 
-export const appName = "LEAT Sophat"
-export const appTitle = "PPhat Dev"
-export const appPositions = ["Senior Front-end Developer.", "UI/UX Designer."]
-export const appDescriptions = "Hello! I'm Sophat LEAT, also known as PPhat, and I'm thrilled to have you here. This portfolio showcases my journey, projects, and passions as a developer and creator. Explore my work, check out my skills, and feel free to connect if you'd like to collaborate or learn more.\nLet's build something amazing together!"
+export const AUTHOR_NAMES = ["LEAT Sophat", "PPhat"];
+export const AUTHOR_POSITIONS = ["Senior Front-end Developer.", "UI/UX Designer."]
+
+export const APP_NAME = "Sophat LEAT";
+export const APP_SHORT_NAME = "PPhat";
+export const APP_DESCRIPTION = "Hello! I'm Sophat LEAT, also known as PPhat, and I'm thrilled to have you here. This portfolio showcases my journey, projects, and passions as a developer and creator. Explore my work, check out my skills, and feel free to connect if you'd like to collaborate or learn more.\nLet's build something amazing together!"
 export const NEXT_PUBLIC_APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://pphat.top"
+export const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || ""

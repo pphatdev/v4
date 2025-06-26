@@ -8,6 +8,7 @@ import AvatarCircles from "./avatar-circles";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
+import { NEXT_PUBLIC_API_URL } from "@/lib/constant";
 
 const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ project, className }) => {
     const avatars = project.authors.map((author) => ({
@@ -22,7 +23,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
             role="article"
             tabIndex={-1}>
 
-            <Image src={project.image} width={512} height={512} alt={project.name || ""} className="object-cover w-full aspect-video border duration-300 transition-all ease-in-out rounded-4xl" />
+            <Image src={NEXT_PUBLIC_API_URL + project.image} width={512} height={512} alt={project.name || ""} className="object-cover w-full aspect-video border duration-300 transition-all ease-in-out rounded-4xl" />
 
             <div className='bg-background/30 ring-1 w-fit absolute top-4 right-4 ml-auto ring-foreground/10 justify-end flex rounded-full p-1'>
                 {project.source.map((source, index) => (
