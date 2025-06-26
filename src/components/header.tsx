@@ -2,9 +2,6 @@ import { cn } from '@/lib/utils';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { ChevronDownIcon } from 'lucide-react';
 import React, { ReactNode, SVGProps, useState, type MouseEvent as ReactMouseEvent, } from 'react';
-import { Logo } from './logo';
-import { ThemeSwitch } from './theme-switch';
-
 
 interface NavLinkProps {
     href?: string;

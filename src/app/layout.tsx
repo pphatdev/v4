@@ -20,7 +20,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
                     defaultTheme="system"
                 >
                     {children}
-                    <div className="fixed bottom-5 right-5 z-50 p-px border rounded-full shadow-lg">
+                    <div className="fixed bottom-5 right-5 z-50 bg-foreground/10 p-px ring ring-primary/50 rounded-full shadow-lg">
                         <MessageButton />
                     </div>
                 </ThemeProvider>

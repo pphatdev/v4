@@ -35,7 +35,7 @@ export const ProjectsSection = () => {
             initial="hidden"
             animate="visible" className='mx-auto w-full z-50 my-20'>
             <div
-                className="w-full mx-auto max-sm:p-0 z-50 p-5 gap-4 sticky shadow-2xl shadow-primary/5 bg-card backdrop-blur-[2px]">
+                className="w-full mx-auto max-sm:p-3 z-50 p-5 gap-4 sticky shadow-2xl shadow-primary/5 bg-card backdrop-blur-[2px]">
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, y: -20 },
