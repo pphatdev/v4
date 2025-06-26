@@ -1,9 +1,3 @@
-/**
- * Hooks api for managing projects.
- *
- * @source https://api.sophat.top/api/v1/projects
- */
-
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Project } from '@/lib/interfaces/projects';

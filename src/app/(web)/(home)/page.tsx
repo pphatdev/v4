@@ -3,7 +3,6 @@ import HomeHeroSection from "@/app/(web)/(home)/sections/hero-section";
 import { ProjectsSection } from './sections/projects';
 import { metadata as meta } from './data/meta';
 import { AboutTimeline } from './sections/timeline';
-import ContactSection from '@/app/(web)/(home)/sections/contact';
 
 export const metadata: Metadata = meta
 
@@ -16,7 +15,6 @@ export default function HomePage() {
             <HomeHeroSection />
             <ProjectsSection/>
             <AboutTimeline />
-            <ContactSection/>
         </main>
     );
 }
