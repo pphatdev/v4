@@ -11,7 +11,6 @@ export default function HomePage() {
     return (
         <main className="max-lg:pt-0 h-full xl:pt-10 flex flex-col relative bg-background text-foreground min-h-screen">
             <div className="absolute inset-0 z-1 pointer-events-none bg-[linear-gradient(to_bottom,transparent_0%,hsl(var(--primary-foreground))_90%),radial-gradient(ellipse_at_center,transparent_40%,hsl(var(--primary-foreground))_95%)]"></div>
-
             <HomeHeroSection />
             <ProjectsSection/>
             <AboutTimeline />
