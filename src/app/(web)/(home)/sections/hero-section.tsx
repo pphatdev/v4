@@ -7,6 +7,7 @@ import { MagneticArea } from '@/components/magnetic-aria';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { ThemeToggle } from '@/components/ui/theme-switch';
+import TechStack from '@/components/tech-stack';
 
 interface RotatingTextRef {
     next: () => void;
@@ -440,46 +441,6 @@ const HomeHeroSection: React.FC = () => {
         visible: { opacity: 0.9, transition: { duration: 0.5, delay: contentDelay + itemDelayIncrement * 3 } }
     };
 
-    const logos = [
-        {
-            id: "logo-1",
-            description: "TypeScript",
-            image: "./assets/brands/language/typescript.svg",
-            className: "size-7",
-        },
-        {
-            id: "logo-2",
-            description: "JavaScript",
-            image: "./assets/brands/language/javascript.svg",
-            className: "size-7",
-        },
-        {
-            id: "logo-3",
-            description: "Node JS",
-            image: "./assets/brands/language/nodejs.svg",
-            className: "size-7",
-        },
-        {
-            id: "logo-4",
-            description: "Next Js",
-            image: "./assets/brands/language/nextjs.svg",
-            icons: NextLogo,
-            className: "size-7",
-        },
-        {
-            id: "logo-5",
-            description: "Laravel",
-            image: "./assets/brands/language/laravel.svg",
-            className: "size-7",
-        },
-        {
-            id: "logo-6",
-            description: "Tailwind CSS",
-            image: "./assets/brands/language/tailwind.svg",
-            className: "size-7",
-        },
-    ]
-
     return (
         <>
             <canvas ref={canvasRef} className="absolute inset-0 z-10 w-full overflow-hidden pointer-events-none opacity-80" />
@@ -533,6 +494,10 @@ const HomeHeroSection: React.FC = () => {
                             />
                         </motion.div>
 
+                        <div className='hidden max-sm:block'>
+                            <TechStack />
+                        </div>
+
                         <motion.p
                             variants={{
                                 hidden: { opacity: 0, y: 10 },
@@ -569,39 +534,14 @@ const HomeHeroSection: React.FC = () => {
                             <ThemeToggle />
                         </motion.div>
 
-                        <motion.div
-                            variants={{
-                                hidden: { opacity: 0, y: 10 },
-                                visible: { opacity: 0.9, y: 0, transition: { duration: 0.5, delay: contentDelay + itemDelayIncrement * 5 } }
-                            }}
-                            initial="hidden"
-                            animate="visible"
-                            className="flex max-sm:order-first order-last flex-col items-center w-full justify-center space-y-2 max-sm:my-4 my-10"
-                        >
-                            <h2 className="text-sm w-full px-1 max-md:px-3 uppercase text-foreground/80 tracking-wider font-medium">My stack</h2>
-                            <div className="flex w-full max-sm:border-y max-sm:bg-foreground/5 backdrop-blur-2xl border-primary/50 max-sm:py-3 pb-1 mt-3 max-md:px-3 max-sm:justify-center items-center flex-wrap gap-5 text-foreground/70">
-                                {logos.map((logo) => (
-                                    <div key={logo.id} className="flex items-center justify-center overflow-hidden rounded-md">
-                                        {logo.icons && <logo.icons />}
-                                        {!logo.icons && (
-                                            <Image
-                                                width={100}
-                                                height={100}
-                                                src={logo.image}
-                                                alt={logo.description}
-                                                className={cn("size-9 shrink-0  transition-all", logo.className)}
-                                            />
-                                        )}
-                                        <span className="sr-only">{logo.description}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </motion.div>
                     </div>
 
                     <MagneticArea className='max-xs:scale-100 shrink-0 max-lg:order-first max-sm:size-52 my-2 w-80 items-center justify-center'>
                         <Profile />
                     </MagneticArea>
+                </div>
+                <div className='hidden sm:block'>
+                    <TechStack />
                 </div>
             </div>
         </>

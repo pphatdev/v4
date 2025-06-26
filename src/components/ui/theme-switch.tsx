@@ -37,7 +37,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     return (
         <div
             className={cn(
-                "flex w-16 h-8 p-1 rounded-full cursor-pointer sm:mt-5 transition-all duration-300",
+                "flex w-16 h-8 p-1 rounded-full scale-3d scale-90 sm:scale-100 cursor-pointer sm:mt-5 transition-all duration-300",
                 isDark ? "bg-background/20 border border-foreground/20" : "bg-background/10 border border-foreground/10",
                 className
             )}

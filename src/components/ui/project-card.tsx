@@ -19,7 +19,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
 
     return (
         <div
-            className={cn("col-span-1 sticky top-5 duration-300 overflow-hidden p-0.5 max-sm:rounded-2xl bg-card group font-sans rounded-4xl mb-4 ring-1 ring-border hover:ring-primary/50 hover:ring-2 transition-all ease-in-out flex flex-col h-full", className)}
+            className={cn("col-span-1 nth-[n+1]:sticky top-5 duration-300 drop-shadow-xl drop-shadow-black/[0.02] overflow-hidden p-0.5 max-sm:rounded-2xl bg-card group font-sans rounded-4xl mb-4 ring-1 ring-border hover:ring-primary/50 hover:ring-2 transition-all ease-in-out flex flex-col h-full", className)}
             role="article"
             tabIndex={-1}>
 
