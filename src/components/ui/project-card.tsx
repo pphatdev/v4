@@ -25,7 +25,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
 
             <Image src={NEXT_PUBLIC_API_URL + project.image} width={512} height={512} alt={project.name || ""} className="object-cover w-full aspect-video border duration-300 transition-all ease-in-out max-sm:rounded-none rounded-4xl" />
 
-            <div className='bg-background/30 ring-1 w-fit absolute top-4 right-4 ml-auto ring-foreground/10 justify-end flex rounded-full p-1'>
+            <div className='bg-background/30 ring-1 w-fit absolute top-4 right-4 ml-auto ring-foreground/10 justify-end flex rounded-full sm:rounded-none p-1'>
                 {project.source.map((source, index) => (
                     <Link
                         key={index}
@@ -33,7 +33,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
                         href={source.url}
                         aria-label={source.type === 'demo' ? 'View live demo' : 'View source code'}
                         title={source.type === 'demo' ? 'View live demo' : 'View source code'}
-                        className="flex rounded-full p-2 hover:ring ring-foreground/20 hover:bg-background/40 text-foreground/90 hover:text-foreground transition-all items-center justify-center">
+                        className="flex max-sm:rounded-none rounded-full p-2 hover:ring ring-foreground/20 hover:bg-background/40 text-foreground/90 hover:text-foreground transition-all items-center justify-center">
                         {source.type === 'demo' && <ExternalLinkIcon className="size-4" />}
                         {source.type === 'source' && <GlobeIcon className="size-4" />}
                     </Link>
@@ -44,7 +44,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
             <header className='mb-2 px-4 relative flex justify-between items-center'>
                 <div className="flex gap-2 items-center">
                     {(project?.tags ?? []).slice(0, 3).map((language, index) => (
-                        <Badge key={index} variant={'outline'} className="font-aladin leading-5 rounded-full bg-foreground/5">{language}</Badge>
+                        <Badge key={index} variant={'outline'} className="font-aladin leading-5 max-sm:rounded-none rounded-full bg-foreground/5">{language}</Badge>
                     ))}
                 </div>
             </header>
@@ -58,7 +58,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
             <p className='font-normal px-4 z-10 line-clamp-2 text-foreground/80'>{project.description}</p>
 
             <footer className="mt-auto px-4 pb-4 flex justify-between pt-2 z-10">
-                <div className='bg-foreground/5 ring-1 w-fit ring-foreground/10 justify-end flex ga rounded-full p-1'>
+                <div className='bg-foreground/5 ring-1 w-fit ring-foreground/10 justify-end flex  max-sm:rounded-none rounded-full p-1'>
                     <AvatarCircles numPeople={avatars.length - 4} avatarUrls={avatars} />
                 </div>
             </footer>

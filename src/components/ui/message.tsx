@@ -66,7 +66,7 @@ export function MessageButton() {
     return (
         <Drawer open={open} onOpenChange={setOpen}>
             <DrawerTrigger asChild>
-                <Button variant="secondary" size={'icon'} className="rounded-full size-10 p-2 animate-ripple" aria-label="Open message dialog">
+                <Button variant="secondary" size={'icon'} className="rounded-sm size-10 p-2 animate-ripple" aria-label="Open message dialog">
                     <Mail className="size-5" />
                 </Button>
             </DrawerTrigger>

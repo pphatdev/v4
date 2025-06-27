@@ -37,21 +37,19 @@ export const ExperienceCard = (
 
                     <p className="text-xs my-2 font-medium">+ Basic Skills</p>
                     <div className="flex gap-2 flex-wrap">
-                        {skills.map(({ icon, title }, key) => {
-                            return (
-                                <div key={key} className="flex space-x-1.5 shrink-0 w-fit shadow-card pr-2 shadow-primary/5 bg-background rounded-full items-center justify-center border p-px text-foreground/5 bg-[size:8px_8px] bg-top-left bg-[image:repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]">
-                                    {icon && (<Image src={icon} width={32} height={32} alt={title} className="size-6 p-0.5 border border-foreground/10 rounded-full" />)}
-                                    <span className="text-xs text-foreground">{title}</span>
-                                </div>
-                            )
-                        })}
+                        {skills.map(({ icon, title }, key) =>
+                            <div key={key} className="flex space-x-1.5 shrink-0 w-fit shadow-card pr-2 shadow-primary/5 bg-background max-sm:rounded-none rounded-full items-center justify-center border p-px text-foreground/5 bg-[size:8px_8px] bg-top-left bg-[image:repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]">
+                                {icon && (<Image src={icon} width={32} height={32} alt={title} className="size-6 p-0.5 border border-foreground/10 max-sm:rounded-none rounded-full" />)}
+                                <span className="text-xs text-foreground">{title}</span>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
 
             <dl className="absolute max-sm:left-0 pointer-events-none -top-1 lg:-left-[calc(14.5rem)] lg:mr-[calc(6.5rem+1px)]">
                 <dt className="sr-only">Date</dt>
-                <dd className="max-sm:text-[8px] text-xs max-sm:leading-4 leading-6 max-sm:border px-1.5 rounded-t-lg font-medium sm:text-sm whitespace-nowrap text-foreground/50">
+                <dd className="max-sm:text-[8px] max-sm:rounded-none text-xs max-sm:leading-4 leading-6 max-sm:border px-1.5 rounded-t-lg font-medium sm:text-sm whitespace-nowrap text-foreground/50">
                     {date}
                 </dd>
             </dl>

@@ -4,6 +4,7 @@ import { ExperienceCard } from "@/components/ui/experience-card";
 import Image from "next/image";
 import React from "react";
 import { motion } from 'framer-motion';
+import { cn } from "@/lib/utils";
 
 export const AboutTimeline = () => {
 
@@ -110,7 +111,7 @@ export const AboutTimeline = () => {
             }}
             initial="hidden"
             animate="visible"
-            className='z-50 relative max-sm:pt-0 bg-gradient-to-b from-background to-transparent backdrop-blur-[2px] w-full py-10'>
+            className='z-50 relative max-sm:py-0 bg-gradient-to-b from-background to-transparent backdrop-blur-[2px] w-full py-10'>
 
             <div className="mx-auto max-w-6xl w-full sm:px-4 sm:my-10">
                 <h1 className="w-full py-3 px-4 bg-background/80 max-sm:border-b sticky z-50 top-0 max-md:text-3xl text-4xl text-start tracking-tighter font-bold font-sans">
@@ -120,11 +121,11 @@ export const AboutTimeline = () => {
                 <div className="w-full sm:pl-7">
                     <div className="relative max-sm:p-4 sm:pb-12 max-sm:border-t sm:ml-[calc(2rem+1px)] mt-10 md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-68rem))]">
                         <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-foreground/20 sm:block"> </div>
-                        <div className="space-y-12">
+                        <div className="gap-12">
                             {experiences.map(({ works, title, companyLogo }, index) => (
                                 <div key={index} className="flex flex-col">
-                                    <div className="flex gap-2 items-center pb-10 md:-translate-x-16">
-                                        {companyLogo && <Image src={`/${companyLogo}`} alt="Avatar" className="object-cover size-6 bg-background border rounded-md" width={32} height={32} />}
+                                    <div className={cn(`flex gap-2 items-center pb-10 md:-translate-x-16`, index === 0 ? "max-sm:mt-0" : "max-sm:mt-10")}>
+                                        {companyLogo && <Image src={`/${companyLogo}`} alt="Avatar" className="object-cover size-6 bg-background border max-sm:rounded-none rounded-md" width={32} height={32} />}
                                         <h2 className="text-xl font-bold text-foreground/80"> {title} </h2>
                                     </div>
                                     <div className="flex flex-col gap-5 space-y-12">

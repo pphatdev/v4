@@ -26,7 +26,7 @@ git clone https://github.com/pphatdev/v4.git && cd ./v4
 Install dependencies and launch the development server:
 
 ```shell
-npm install && npm run dev
+cp .env.example .env && npm install && npm run dev
 ```
 
 This will:
