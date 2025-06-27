@@ -17,7 +17,7 @@ export const ExperienceCard = (
 
     return (
         <article className="relative group">
-            <div className="absolute -inset-y-2.5 transition-colors -inset-x-4 md:-inset-y-4 md:-inset-x-4 sm:rounded-2xl group-hover:bg-foreground/5"></div>
+            <div className="absolute max-sm:border-b -inset-y-2.5 transition-colors -inset-x-4 md:-inset-y-4 md:-inset-x-4 sm:rounded-2xl group-hover:bg-foreground/5"></div>
 
             <svg viewBox="0 0 9 9" stroke="currentColor" className="hidden absolute right-full mr-6 top-2 text-primary/20 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block">
                 <circle cx="4.5" cy="4.5" r="4.5" strokeWidth="1" className="fill-primary"></circle>
