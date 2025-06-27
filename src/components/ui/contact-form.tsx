@@ -8,6 +8,7 @@ import { Button } from "./button";
 import { LoadingSpinner } from "./loading-spinner";
 import { ContactFormProps, SentChatProps } from "@/lib/interfaces/contact-form";
 import { ButtonAnimation } from "./button-animation";
+import { CONTACT_EMAIL } from "@/lib/constant";
 
 
 export const ContactForm: React.FC<ContactFormProps> = ({
@@ -166,7 +167,7 @@ export const SentChat: React.FC<SentChatProps> = ({
             </div>
             <h3 className="text-2xl font-semibold mb-4">Message Sent!</h3>
             <p className="text-muted-foreground mb-2">Thank you for reaching out.<br /> Your message has been sent to:</p>
-            <p className="font-medium text-primary mb-6">info.sophat@gmail.com</p>
+            <p className="font-medium text-primary mb-6">{CONTACT_EMAIL}</p>
             <p className="text-sm text-muted-foreground mb-6">I'll get back to you as soon as possible.</p>
             <Button className="rounded-full cursor-pointer" onClick={() => setSubmitted(false)}>Send Another Message</Button>
         </div>
