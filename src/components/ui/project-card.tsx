@@ -25,7 +25,7 @@ const ProjectCard: React.FC<{ project: Project, className?: string }> = ({ proje
 
             <Image src={NEXT_PUBLIC_API_URL + project.image} width={512} height={512} alt={project.name || ""} className="object-cover w-full aspect-video border duration-300 transition-all ease-in-out max-sm:rounded-none rounded-4xl" />
 
-            <div className='bg-background/30 ring-1 w-fit absolute top-4 right-4 ml-auto ring-foreground/10 justify-end flex max-sm:rounded-none rounded-full p-1'>
+            <div className='bg-background/30 ring-1 w-fit absolute top-4 right-4 ml-auto ring-foreground/10 justify-end flex rounded-full sm:rounded-none p-1'>
                 {project.source.map((source, index) => (
                     <Link
                         key={index}
