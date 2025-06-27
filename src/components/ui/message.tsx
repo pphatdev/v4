@@ -34,8 +34,8 @@ export function MessageButton() {
             <>
                 <Dialog open={open} onOpenChange={setOpen}>
                     <DialogTrigger asChild>
-                        <Button variant="secondary" size={'icon'} className="rounded-full p-2 animate-ripple" aria-label="Open message dialog">
-                            <Mail className="size-4" />
+                        <Button variant="secondary" size={'icon'} className="rounded-full size-12 p-2 animate-ripple" aria-label="Open message dialog">
+                            <Mail className="size-5" />
                         </Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[525px] rounded-3xl p-0">
@@ -66,8 +66,8 @@ export function MessageButton() {
     return (
         <Drawer open={open} onOpenChange={setOpen}>
             <DrawerTrigger asChild>
-                <Button variant="secondary" size={'icon'} className="rounded-full p-2 border-primary animate-ripple" aria-label="Open message dialog">
-                    <Mail className="size-4"/>
+                <Button variant="secondary" size={'icon'} className="rounded-full size-10 p-2 animate-ripple" aria-label="Open message dialog">
+                    <Mail className="size-5" />
                 </Button>
             </DrawerTrigger>
             <DrawerContent className="rounded-3xl p-0">
