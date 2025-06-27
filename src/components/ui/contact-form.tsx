@@ -116,7 +116,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                         rows={4}
                         required
                         spellCheck="true"
-                        autoComplete="message"
+                        autoComplete="off"
                         value={formData.message}
                         onChange={handleChange}
                         className={cn(formErrors.message ? "border-destructive ring-primary" : "", "rounded-2xl bg-transparent resize-none")}
