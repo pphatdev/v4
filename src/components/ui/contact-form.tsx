@@ -8,6 +8,7 @@ import { Button } from "./button";
 import { LoadingSpinner } from "./loading-spinner";
 import { ContactFormProps, SentChatProps } from "@/lib/interfaces/contact-form";
 import { ButtonAnimation } from "./button-animation";
+import { CONTACT_EMAIL } from "@/lib/constant";
 
 
 export const ContactForm: React.FC<ContactFormProps> = ({
@@ -34,7 +35,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 </p>
             </div>
 
-            <div className="flex max-sm:px-5 flex-col gap-6 max-sm:gap-4 border rounded-3xl sm:bg-background p-6">
+            <div className="flex max-sm:px-5 flex-col gap-6 max-sm:gap-4 border scrollbar-0 rounded-3xl overflow-y-auto sm:bg-background p-6" style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}>
+                <style>
+                    {`::-webkit-scrollbar { display: none; }`}
+                </style>
                 <div className="grid grid-cols-2 gap-4 max-sm:gap-2">
                     <div className="space-y-2">
                         <Label htmlFor="name" className="max-sm:font-normal">Your Name</Label>
@@ -42,6 +46,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                             id="name"
                             name="name"
                             placeholder="John Doe"
+                            autoFocus
+                            spellCheck="true"
+                            autoComplete="name"
                             required
                             value={formData.name}
                             onChange={handleChange}
@@ -61,6 +68,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                             id="email"
                             name="email"
                             type="email"
+                            autoComplete="email"
                             placeholder="john@example.com"
                             required
                             value={formData.email}
@@ -84,6 +92,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                         name="subject"
                         placeholder="Project Inquiry"
                         required
+                        spellCheck="true"
+                        autoComplete="subject"
                         value={formData.subject}
                         onChange={handleChange}
                         className={cn(formErrors.subject ? "border-destructive ring-primary" : "", "rounded-full bg-transparent")}
@@ -105,9 +115,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                         placeholder="Hello, I'd like to discuss a project..."
                         rows={4}
                         required
+                        spellCheck="true"
+                        autoComplete="off"
                         value={formData.message}
                         onChange={handleChange}
-                        className={cn(formErrors.message ? "border-destructive ring-primary" : "", "rounded-2xl bg-transparent")}
+                        className={cn(formErrors.message ? "border-destructive ring-primary" : "", "rounded-2xl bg-transparent resize-none")}
                         aria-invalid={Boolean(formErrors.message)}
                     />
                     {formErrors.message && (
@@ -158,7 +170,7 @@ export const SentChat: React.FC<SentChatProps> = ({
             </div>
             <h3 className="text-2xl font-semibold mb-4">Message Sent!</h3>
             <p className="text-muted-foreground mb-2">Thank you for reaching out.<br /> Your message has been sent to:</p>
-            <p className="font-medium text-primary mb-6">info.sophat@gmail.com</p>
+            <p className="font-medium text-primary mb-6">{CONTACT_EMAIL}</p>
             <p className="text-sm text-muted-foreground mb-6">I'll get back to you as soon as possible.</p>
             <Button className="rounded-full cursor-pointer" onClick={() => setSubmitted(false)}>Send Another Message</Button>
         </div>

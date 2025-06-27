@@ -443,9 +443,9 @@ const HomeHeroSection: React.FC = () => {
 
     return (
         <>
-            <canvas ref={canvasRef} className="absolute inset-0 z-10 w-full overflow-hidden pointer-events-none opacity-80" />
-            <div className='w-full max-w-6xl sticky flex-grow mt-10 flex flex-col items-start justify-start mx-auto px-1 md:px-14 md:pt-10 lg:px-4 h-full max-sm:pb-5 pb-14 z-10'>
-                <div className='flex gap-5 max-lg:items-center max-lg:flex-col items-start w-full justify-between'>
+            <canvas ref={canvasRef} className="absolute inset-0 z-[-1] w-full overflow-hidden pointer-events-none opacity-80" />
+            <div className='w-full max-w-6xl sticky flex-grow flex flex-col items-start justify-start mx-auto px-1 md:px-14 md:pt-28 lg:px-4 h-full max-sm:pb-5 pb-14 z-10'>
+                <div className='flex gap-5 max-lg:items-center max-lg:flex-col items-start w-full justify-between max-sm:border max-sm:pb-4 max-sm:mt-1'>
                     <div className='w-full max-sm:text-center flex flex-col max-w-4xl'>
                         {/* <Announcing className='w-full max-lg:text-center max-md:mt-10 max-sm:order-1 order-0' /> */}
 
@@ -453,7 +453,7 @@ const HomeHeroSection: React.FC = () => {
                             variants={headlineVariants}
                             initial="hidden"
                             animate="visible"
-                            className="max-sm:text-3xl max-sm:order-first inline-flex max-md:justify-center justify-start items-center w-full text-4xl lg:text-5xl xl:text-6xl font-black text-foreground max-md:text-left text-left leading-tight max-w-4xl"
+                            className="max-sm:text-3xl max-sm:border-t max-sm:bg-foreground/5 max-sm:pt-3 max-sm:order-first inline-flex max-md:justify-center justify-start items-center w-full text-4xl lg:text-5xl xl:text-6xl font-black text-foreground max-md:text-left text-left leading-tight max-w-4xl"
                         >
                             {`Hello, I'm`}
                             <RotatingText
@@ -476,7 +476,7 @@ const HomeHeroSection: React.FC = () => {
                             variants={headlineVariants}
                             initial="hidden"
                             animate="visible"
-                            className="text-2xl sm:text-3xl max-sm:order-first lg:text-4xl font-semibold text-foreground/80 max-md:text-center max-sm:mb-5 mb-12"
+                            className="text-2xl sm:text-3xl max-sm:border-b max-sm:bg-foreground/5 max-sm:mb-0 max-sm:pb-4 max-sm:order-first lg:text-4xl font-semibold text-foreground/80 max-md:text-center mb-12"
                         >
                             <RotatingText
                                 texts={['Senior Frontend Developer', 'UI/UX Designer']}
@@ -494,7 +494,7 @@ const HomeHeroSection: React.FC = () => {
                             />
                         </motion.div>
 
-                        <div className='hidden max-sm:block'>
+                        <div className='hidden max-sm:border-y max-sm:py-3 max-sm:block'>
                             <TechStack />
                         </div>
 
@@ -505,7 +505,7 @@ const HomeHeroSection: React.FC = () => {
                             }}
                             initial="hidden"
                             animate="visible"
-                            className="text-sm max-md:px-3 lg:px-1 sm:text-lg max-md:text-start font-sans text-foreground/80 mx-auto"
+                            className="text-sm max-md:px-3 max-sm:py-3 lg:px-1 sm:text-lg max-md:text-start font-sans text-foreground/80 mx-auto"
                         >
                             I started my career as a Front-end Developer in 2021, and I have a passion for creating beautiful and functional user interfaces. I love to learn new technologies and improve my skills every day.
                         </motion.p>
@@ -540,7 +540,7 @@ const HomeHeroSection: React.FC = () => {
                         <Profile />
                     </MagneticArea>
                 </div>
-                <div className='hidden sm:block'>
+                <div className='hidden sm:block w-full'>
                     <TechStack />
                 </div>
             </div>

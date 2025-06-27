@@ -24,10 +24,7 @@ export const Profile = () => {
             loadImage('/assets/gallery/WEBP/IMG_1915.webp'),
             loadImage('/assets/masks/mask.webp')
         ]).then(([img, mask]) => {
-            const scale = Math.max(
-                canvas.width / img.width,
-                canvas.height / img.height
-            );
+            const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
             const x = (canvas.width - img.width * scale) / 2;
             const y = (canvas.height - img.height * scale) / 2;
 
@@ -51,10 +48,11 @@ export const Profile = () => {
             variants={bannerVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-sm w-full relative"
-            // style={{ background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))' }}
+            className="max-w-sm w-full h-full relative max-sm:border inline-flex mt-2 items-center justify-center"
         >
-            <canvas ref={renderCanvas} className="h-full w-full bg-center m-1" />
+            <div className="p-7 h-full w-full">
+                <canvas ref={renderCanvas} className="h-full w-full bg-center m-1" />
+            </div>
             <RainbowGlow className="opacity-20" />
         </motion.div>
     );

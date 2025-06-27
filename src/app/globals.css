@@ -277,6 +277,10 @@
     animation-delay: -0.5s;
   }
 
+  .scrollbar-0 {
+    scrollbar-width: none;
+  }
+
   @keyframes spotlight {
     0% {
       opacity: 0;
