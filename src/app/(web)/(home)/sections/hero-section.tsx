@@ -7,6 +7,7 @@ import { MagneticArea } from '@/components/magnetic-aria';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { ThemeToggle } from '@/components/ui/theme-switch';
+import TechStack from '@/components/tech-stack';
 
 interface RotatingTextRef {
     next: () => void;
@@ -440,59 +441,19 @@ const HomeHeroSection: React.FC = () => {
         visible: { opacity: 0.9, transition: { duration: 0.5, delay: contentDelay + itemDelayIncrement * 3 } }
     };
 
-    const logos = [
-        {
-            id: "logo-1",
-            description: "TypeScript",
-            image: "./assets/brands/language/typescript.svg",
-            className: "size-7",
-        },
-        {
-            id: "logo-2",
-            description: "JavaScript",
-            image: "./assets/brands/language/javascript.svg",
-            className: "size-7",
-        },
-        {
-            id: "logo-3",
-            description: "Node JS",
-            image: "./assets/brands/language/nodejs.svg",
-            className: "size-7",
-        },
-        {
-            id: "logo-4",
-            description: "Next Js",
-            image: "./assets/brands/language/nextjs.svg",
-            icons: NextLogo,
-            className: "size-7",
-        },
-        {
-            id: "logo-5",
-            description: "Laravel",
-            image: "./assets/brands/language/laravel.svg",
-            className: "size-7",
-        },
-        {
-            id: "logo-6",
-            description: "Tailwind CSS",
-            image: "./assets/brands/language/tailwind.svg",
-            className: "size-7",
-        },
-    ]
-
     return (
         <>
             <canvas ref={canvasRef} className="absolute inset-0 z-10 w-full overflow-hidden pointer-events-none opacity-80" />
-            <div className='w-full max-w-6xl sticky flex-grow mt-10 flex flex-col items-start justify-start mx-auto px-1 md:px-14 md:pt-10 lg:px-4 h-full pb-14 z-10'>
+            <div className='w-full max-w-6xl sticky flex-grow mt-10 flex flex-col items-start justify-start mx-auto px-1 md:px-14 md:pt-10 lg:px-4 h-full max-sm:pb-5 pb-14 z-10'>
                 <div className='flex gap-5 max-lg:items-center max-lg:flex-col items-start w-full justify-between'>
                     <div className='w-full max-sm:text-center flex flex-col max-w-4xl'>
-                        <Announcing className='w-full max-lg:text-center max-md:mt-10 max-sm:order-1 order-0' />
+                        {/* <Announcing className='w-full max-lg:text-center max-md:mt-10 max-sm:order-1 order-0' /> */}
 
                         <motion.h1
                             variants={headlineVariants}
                             initial="hidden"
                             animate="visible"
-                            className="max-sm:text-3xl inline-flex max-md:justify-center justify-start items-center w-full text-4xl lg:text-5xl xl:text-6xl font-black text-foreground max-md:text-left text-left leading-tight max-w-4xl"
+                            className="max-sm:text-3xl max-sm:order-first inline-flex max-md:justify-center justify-start items-center w-full text-4xl lg:text-5xl xl:text-6xl font-black text-foreground max-md:text-left text-left leading-tight max-w-4xl"
                         >
                             {`Hello, I'm`}
                             <RotatingText
@@ -515,7 +476,7 @@ const HomeHeroSection: React.FC = () => {
                             variants={headlineVariants}
                             initial="hidden"
                             animate="visible"
-                            className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground/80 max-md:text-center mb-12"
+                            className="text-2xl sm:text-3xl max-sm:order-first lg:text-4xl font-semibold text-foreground/80 max-md:text-center max-sm:mb-5 mb-12"
                         >
                             <RotatingText
                                 texts={['Senior Frontend Developer', 'UI/UX Designer']}
@@ -533,6 +494,10 @@ const HomeHeroSection: React.FC = () => {
                             />
                         </motion.div>
 
+                        <div className='hidden max-sm:block'>
+                            <TechStack />
+                        </div>
+
                         <motion.p
                             variants={{
                                 hidden: { opacity: 0, y: 10 },
@@ -540,7 +505,7 @@ const HomeHeroSection: React.FC = () => {
                             }}
                             initial="hidden"
                             animate="visible"
-                            className="text-base max-md:px-3 lg:px-1 sm:text-lg max-md:text-start font-sans text-foreground/80 mx-auto"
+                            className="text-sm max-md:px-3 lg:px-1 sm:text-lg max-md:text-start font-sans text-foreground/80 mx-auto"
                         >
                             I started my career as a Front-end Developer in 2021, and I have a passion for creating beautiful and functional user interfaces. I love to learn new technologies and improve my skills every day.
                         </motion.p>
@@ -552,7 +517,7 @@ const HomeHeroSection: React.FC = () => {
                             }}
                             initial="hidden"
                             animate="visible"
-                            className="text-base max-md:px-3 lg:px-1 sm:text-lg max-md:text-start text-foreground/80 lg:mt-8"
+                            className="text-sm max-md:px-3 lg:px-1 sm:text-lg max-md:text-start text-foreground/80 lg:mt-8"
                         >
                             I am also a big fan of open-source projects and I enjoy contributing to the community. I believe that sharing knowledge is the key to success in this field.
                         </motion.p>
@@ -564,44 +529,19 @@ const HomeHeroSection: React.FC = () => {
                             }}
                             initial="hidden"
                             animate="visible"
-                            className="flex items-center justify-start space-x-3 mt-8 max-md:justify-center"
+                            className="flex items-center max-sm:my-6 max-sm:-order-1 justify-start space-x-3 sm:mt-8 max-md:justify-center"
                         >
                             <ThemeToggle />
                         </motion.div>
 
-                        <motion.div
-                            variants={{
-                                hidden: { opacity: 0, y: 10 },
-                                visible: { opacity: 0.9, y: 0, transition: { duration: 0.5, delay: contentDelay + itemDelayIncrement * 5 } }
-                            }}
-                            initial="hidden"
-                            animate="visible"
-                            className="flex flex-col items-center w-full justify-center space-y-2 my-10 order-last"
-                        >
-                            <h2 className="text-sm w-full px-1 max-md:px-3 uppercase text-foreground/80 tracking-wider font-medium">My stack</h2>
-                            <div className="flex w-full max-md:px-3 max-sm:justify-center items-center flex-wrap pb-1 gap-5 text-foreground/70">
-                                {logos.map((logo) => (
-                                    <div key={logo.id} className="flex items-center justify-center overflow-hidden rounded-md">
-                                        {logo.icons && <logo.icons />}
-                                        {!logo.icons && (
-                                            <Image
-                                                width={100}
-                                                height={100}
-                                                src={logo.image}
-                                                alt={logo.description}
-                                                className={cn("size-9 shrink-0 grayscale hover:filter-none transition-all", logo.className)}
-                                            />
-                                        )}
-                                        <span className="sr-only">{logo.description}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </motion.div>
                     </div>
 
                     <MagneticArea className='max-xs:scale-100 shrink-0 max-lg:order-first max-sm:size-52 my-2 w-80 items-center justify-center'>
                         <Profile />
                     </MagneticArea>
+                </div>
+                <div className='hidden sm:block'>
+                    <TechStack />
                 </div>
             </div>
         </>

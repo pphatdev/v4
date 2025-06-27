@@ -2,12 +2,8 @@
 import { motion, type Variants } from 'framer-motion';
 import { useCallback } from 'react';
 import { RainbowGlow } from './rainbow-glow';
-import { useProjects } from '@/hooks/projects';
-
 
 export const Profile = () => {
-
-    const { projects, loading, error } = useProjects();
 
     const loadImage = (src: string): Promise<HTMLImageElement> => new Promise<HTMLImageElement>(resolve => {
         const img = new Image();
