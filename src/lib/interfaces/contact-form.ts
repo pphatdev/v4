@@ -1,5 +1,12 @@
+export interface FormData {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+}
+
 export interface ContactFormProps {
-    formData: any;
+    formData: FormData;
     formErrors: Record<string, string>;
     isSubmitting: boolean;
     error: string | null;
