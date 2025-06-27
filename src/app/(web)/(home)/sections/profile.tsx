@@ -2,6 +2,7 @@
 import { motion, type Variants } from 'framer-motion';
 import { useCallback } from 'react';
 import { RainbowGlow } from './rainbow-glow';
+// import Image from 'next/image';
 
 export const Profile = () => {
 
@@ -51,10 +52,12 @@ export const Profile = () => {
             variants={bannerVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-sm w-full relative"
+            className="max-w-sm w-full h-full relative max-sm:border inline-flex mt-2 items-center justify-center"
             // style={{ background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))' }}
         >
-            <canvas ref={renderCanvas} className="h-full w-full bg-center m-1" />
+            <canvas ref={renderCanvas} className="h-full w-full bg-center p-7 m-1" />
+
+            {/* <Image src={'/assets/gallery/WEBP/IMG_1915.webp'} width={100} height={100} alt={""} priority className='size-28 rounded-2xl border-3 border-transparent ring-1 ring-primary/50 object-cover'/> */}
             <RainbowGlow className="opacity-20" />
         </motion.div>
     );
