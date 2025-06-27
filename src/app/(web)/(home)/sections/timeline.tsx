@@ -110,15 +110,15 @@ export const AboutTimeline = () => {
             }}
             initial="hidden"
             animate="visible"
-            className='z-50 relative bg-gradient-to-b from-background to-transparent backdrop-blur-[2px] w-full py-10'>
+            className='z-50 relative max-sm:pt-0 bg-gradient-to-b from-background to-transparent backdrop-blur-[2px] w-full py-10'>
 
             <div className="mx-auto max-w-6xl w-full sm:px-4 sm:my-10">
-                <h1 className="w-full py-3 px-4 bg-background/80 max-sm:border-y border-primary/50 sticky z-50 top-5 max-md:text-3xl text-4xl text-start tracking-tighter font-bold font-sans">
+                <h1 className="w-full py-3 px-4 bg-background/80 max-sm:border-b sticky z-50 top-0 max-md:text-3xl text-4xl text-start tracking-tighter font-bold font-sans">
                     Work <span className="text-left bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">Experience</span>
                 </h1>
 
                 <div className="w-full sm:pl-7">
-                    <div className="relative max-sm:p-4 sm:pb-12 sm:ml-[calc(2rem+1px)] mt-10 md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-68rem))]">
+                    <div className="relative max-sm:p-4 sm:pb-12 max-sm:border-t sm:ml-[calc(2rem+1px)] mt-10 md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-68rem))]">
                         <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-foreground/20 sm:block"> </div>
                         <div className="space-y-12">
                             {experiences.map(({ works, title, companyLogo }, index) => (
