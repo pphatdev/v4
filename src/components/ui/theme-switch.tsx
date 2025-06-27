@@ -37,7 +37,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     return (
         <div
             className={cn(
-                "flex w-16 h-8 p-1 rounded-full scale-3d scale-90 sm:scale-100 cursor-pointer sm:mt-5 transition-all duration-300",
+                "flex w-16 h-8 p-1 max-sm:rounded-none rounded-full scale-3d scale-90 sm:scale-100 cursor-pointer sm:mt-5 transition-all duration-300",
                 isDark ? "bg-background/20 border border-foreground/20" : "bg-background/10 border border-foreground/10",
                 className
             )}
@@ -51,7 +51,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
             <div className="flex justify-between items-center w-full">
                 <div
                     className={cn(
-                        "flex justify-center items-center w-6 h-6 rounded-full transition-transform duration-300",
+                        "flex justify-center items-center w-6 h-6 max-sm:rounded-none rounded-full transition-transform duration-300",
                         isDark
                             ? "transform translate-x-0 bg-foreground/20 border border-foreground/10"
                             : "transform translate-x-8 bg-foreground/10 border border-foreground/10"
@@ -64,7 +64,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
                 </div>
                 <div
                     className={cn(
-                        "flex justify-center items-center w-6 h-6 rounded-full transition-transform duration-300",
+                        "flex justify-center items-center w-6 h-6 max-sm:rounded-none rounded-full transition-transform duration-300",
                         isDark ? "bg-background/50" : "transform -translate-x-8"
                     )}
                 >

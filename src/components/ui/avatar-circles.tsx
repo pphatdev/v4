@@ -22,7 +22,7 @@ const AvatarCircles: React.FC<AvatarCirclesProps> = ({
     avatarUrls,
 }: AvatarCirclesProps) => {
     return (
-        <div className={cn("z-10 flex -space-x-6 rtl:space-x-reverse", className)}>
+        <div className={cn("z-10 flex  max-sm:space-x-1 -space-x-6 rtl:space-x-reverse", className)}>
             {avatarUrls.map((url, index) => (
                 <Link
                     key={index}
@@ -33,7 +33,7 @@ const AvatarCircles: React.FC<AvatarCirclesProps> = ({
                 >
                     <div className="relative hover:z-50 transition-all hover:scale-110 h-10 w-10">
                         <Image
-                            className="rounded-full border-2 border-foreground/10"
+                            className="rounded-full max-sm:rounded-none border-2 border-foreground/10"
                             src={url.imageUrl}
                             fill
                             sizes="40px"
