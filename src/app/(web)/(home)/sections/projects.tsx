@@ -6,17 +6,19 @@ import { motion } from 'framer-motion';
 import { useProjects } from "@/hooks/projects";
 
 const Projects: React.FC = () => {
-
     const { projects, loading, error } = useProjects();
 
     return (
         <div className="w-full max-w-6xl mx-auto max-sm:p-0 px-4 pb-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-7 stick">
-
-            {loading && <p className="text-center text-gray-500">Loading projects...</p>}
-            {error && <p className="text-center text-red-500">Error: {error}</p>}
+            {loading && <p className="text-center text-foreground/50 col-span-full">Loading projects...</p>}
+            {error && <p className="text-center text-destructive col-span-full">Error: {error}</p>}
 
             {/* If using the custom hook, uncomment the line below */}
-            {projects.map((project, index) => (<ProjectCard key={index} project={project} />))}
+            {projects.map((project, index) => (
+                <React.Fragment key={index}>
+                    <ProjectCard project={project} />
+                </React.Fragment>
+            ))}
         </div>
     )
 }
@@ -33,9 +35,9 @@ export const ProjectsSection = () => {
                 }
             }}
             initial="hidden"
-            animate="visible" className='mx-auto w-full z-50 sm:mt-20'>
+            animate="visible" className='mx-auto w-full'>
             <div
-                className="w-full mx-auto max-sm:p-3 max-sm:pb-10 z-50 p-5 gap-4 sticky shadow-2xl shadow-primary/5 bg-card backdrop-blur-[2px]">
+                className="w-full mx-auto max-sm:p-3 max-sm:pb-4 z-[999] p-5 gap-4 sticky shadow-2xl shadow-primary/5 bg-card backdrop-blur-[2px]">
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, y: -20 },
