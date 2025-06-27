@@ -29,7 +29,7 @@ const TechStack = () => {
             }}
             initial="hidden"
             animate="visible"
-            className="flex  order-last flex-col items-center w-full justify-center space-y-2 max-sm:my-4 my-10"
+            className="flex  order-last flex-col items-center w-full justify-center space-y-2 max-sm:my-4 my-10 sm:pt-10"
         >
             <div>
                 <h2 className="text-sm w-full px-1 text-center max-md:px-3 uppercase text-foreground/80 tracking-wider font-medium">Tech stack</h2>
