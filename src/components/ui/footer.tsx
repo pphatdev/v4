@@ -81,7 +81,7 @@ export function Footer() {
                                                 rel="noopener noreferrer"
                                                 className="hover:text-foreground inline-flex items-center transition-all duration-300"
                                             >
-                                                {link.icon && <link.icon className="me-1 size-5" />}
+                                                {link.icon && <link.icon className="me-1 size-5 max-sm:border" />}
                                                 {link.title}
                                             </a>
                                         </li>
