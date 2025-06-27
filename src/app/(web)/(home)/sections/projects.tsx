@@ -45,7 +45,7 @@ export const ProjectsSection = () => {
                     }}
                     initial="hidden"
                     animate="visible"
-                    className="w-full py-3 px-4 mb-10 mx-auto text-start max-w-6xl z-50 tracking-tighter font-sans">
+                    className="w-full py-3 max-sm:px-0 px-4 mb-10 mx-auto text-start max-w-6xl z-50 tracking-tighter font-sans">
 
                     <h1 className="w-full py-3 mx-auto text-start max-w-6xl z-50 max-md:text-3xl text-4xl tracking-tighter font-bold font-sans">
                         My <span className="text-left bg-background bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]"> Works </span>
