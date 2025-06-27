@@ -35,7 +35,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 </p>
             </div>
 
-            <div className="flex max-sm:px-5 flex-col gap-6 max-sm:gap-4 border scrollbar-0 rounded-3xl overflow-y-auto sm:bg-background p-6">
+            <div className="flex max-sm:px-5 flex-col gap-6 max-sm:gap-4 border scrollbar-0 rounded-3xl overflow-y-auto sm:bg-background p-6" style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}>
+                <style>
+                    {`::-webkit-scrollbar { display: none; }`}
+                </style>
                 <div className="grid grid-cols-2 gap-4 max-sm:gap-2">
                     <div className="space-y-2">
                         <Label htmlFor="name" className="max-sm:font-normal">Your Name</Label>
