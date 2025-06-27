@@ -110,7 +110,7 @@ export const AboutTimeline = () => {
             }}
             initial="hidden"
             animate="visible"
-            className='z-50 bg-gradient-to-b from-background to-transparent backdrop-blur-[2px] sticky top-0 w-full py-10'>
+            className='z-50 relative bg-gradient-to-b from-background to-transparent backdrop-blur-[2px] w-full py-10'>
 
             <div className="mx-auto max-w-6xl w-full sm:px-4 sm:my-10">
                 <h1 className="w-full py-3 px-4 bg-background/80 max-sm:border-y border-primary/50 sticky z-50 top-5 max-md:text-3xl text-4xl text-start tracking-tighter font-bold font-sans">
@@ -143,8 +143,6 @@ export const AboutTimeline = () => {
                     </div>
                 </div>
             </div>
-
-
         </motion.section>
     )
 }
