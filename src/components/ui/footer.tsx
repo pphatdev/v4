@@ -77,6 +77,8 @@ export function Footer() {
                                         <li key={link.title}>
                                             <a
                                                 href={link.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                                 className="hover:text-foreground inline-flex items-center transition-all duration-300"
                                             >
                                                 {link.icon && <link.icon className="me-1 size-5" />}
