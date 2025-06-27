@@ -50,7 +50,9 @@ export const Profile = () => {
             animate="visible"
             className="max-w-sm w-full h-full relative max-sm:border inline-flex mt-2 items-center justify-center"
         >
-            <canvas ref={renderCanvas} className="h-full w-full bg-center p-7 m-1" />
+            <div className="p-7 h-full w-full">
+                <canvas ref={renderCanvas} className="h-full w-full bg-center m-1" />
+            </div>
             <RainbowGlow className="opacity-20" />
         </motion.div>
     );
