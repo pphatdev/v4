@@ -540,7 +540,7 @@ const HomeHeroSection: React.FC = () => {
                         <Profile />
                     </MagneticArea>
                 </div>
-                <div className='hidden sm:block'>
+                <div className='hidden sm:block w-full'>
                     <TechStack />
                 </div>
             </div>
