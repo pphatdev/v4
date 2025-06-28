@@ -58,16 +58,16 @@ const footerLinks: FooterSection[] = [
 export function Footer() {
     return (
         <footer className="md:rounded-t-6xl max-sm:rounded-none max-sm:mt-2 relative w-full z-50 mx-auto flex flex-col items-center justify-center rounded-t-4xl border-t bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]">
-            <div className="bg-foreground/20 absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full blur" />
-            <div className="grid w-full max-w-6xl max-sm:gap-0 gap-8 xl:grid-cols-3 xl:gap-8">
-                <AnimatedContainer className="space-y-4 max-sm:order-last max-sm:py-10 py-12 max-sm:text-center lg:py-16 px-6 max-sm:flex flex-col items-center justify-center">
+            <div className="bg-foreground/20 absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full" />
+            <div className="grid w-full max-w-6xl max-sm:gap-0 gap-0 xl:grid-cols-3">
+                <AnimatedContainer className="space-y-4 max-sm:order-last max-sm:py-10 pt-12 max-sm:text-center px-6 max-sm:flex flex-col items-center justify-center">
                     <Logo/>
                     <p className="text-muted-foreground max-sm:mt-0 mt-8 text-sm md:mt-0">
                         © {new Date().getFullYear()} {APP_SHORT_NAME}. All rights reserved.
                     </p>
                 </AnimatedContainer>
 
-                <div className="sm:mt-10 grid grid-cols-2 max-sm:gap-0 gap-8 sm:grid-cols-3 md:col-span-2 xl:mt-0 max-sm:px-4 max-sm:border-b px-6 py-12 lg:py-16">
+                <div className="grid grid-cols-2 max-sm:gap-0 gap-8 sm:grid-cols-3 md:col-span-2 xl:mt-0 max-sm:px-4 max-sm:border-b px-6 py-12">
                     {footerLinks.map((section, index) => (
                         <AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
                             <div className="max-sm:mb-5 mb-10 md:mb-0 divide divide-foreground/10">
