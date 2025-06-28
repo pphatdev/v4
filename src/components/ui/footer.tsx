@@ -60,7 +60,7 @@ export function Footer() {
         <footer className="md:rounded-t-6xl max-sm:rounded-none max-sm:mt-2 relative w-full z-50 mx-auto flex flex-col items-center justify-center rounded-t-4xl border-t bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]">
             <div className="bg-foreground/20 absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full" />
             <div className="grid w-full max-w-6xl max-sm:gap-0 gap-0 xl:grid-cols-3">
-                <AnimatedContainer className="space-y-4 max-sm:order-last max-sm:py-10 pt-12 max-sm:text-center px-6 max-sm:flex flex-col items-center justify-center">
+                <AnimatedContainer className="space-y-4 max-sm:order-last max-sm:py-10 pt-12 pb-12 max-sm:text-center px-6 max-sm:flex flex-col items-center justify-center">
                     <Logo/>
                     <p className="text-muted-foreground max-sm:mt-0 mt-8 text-sm md:mt-0">
                         © {new Date().getFullYear()} {APP_SHORT_NAME}. All rights reserved.
