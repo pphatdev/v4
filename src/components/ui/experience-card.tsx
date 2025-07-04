@@ -1,18 +1,9 @@
+import { WorkExperience } from "@/lib/interfaces/skills";
 import Image from "next/image";
-
-interface SkillsType {
-    title: string;
-    icon: string;
-}
-
-interface ExperienceCardProps {
-    title: string;
-    date: string;
-    skills: SkillsType[];
-}
+import React, { ReactElement, SVGProps } from "react";
 
 export const ExperienceCard = (
-    { title, date, skills }: ExperienceCardProps
+    { title, date, skills }: WorkExperience
 ) => {
 
     return (
@@ -37,12 +28,23 @@ export const ExperienceCard = (
 
                     <p className="text-xs my-2 font-medium">+ Basic Skills</p>
                     <div className="flex gap-2 flex-wrap">
-                        {skills.map(({ icon, title }, key) =>
-                            <div key={key} className="flex space-x-1.5 shrink-0 w-fit shadow-card pr-2 shadow-primary/5 bg-background max-sm:rounded-none rounded-full items-center justify-center border p-px text-foreground/5 bg-[size:8px_8px] bg-top-left bg-[image:repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]">
-                                {icon && (<Image src={icon} width={32} height={32} alt={title} className="size-6 p-0.5 border border-foreground/10 max-sm:rounded-none rounded-full" />)}
-                                <span className="text-xs text-foreground">{title}</span>
-                            </div>
-                        )}
+                        {skills.map(({ image, icon, title }, key) => {
+                            return (
+                                <div key={key} className="flex space-x-1.5 shrink-0 w-fit shadow-card pr-2 shadow-primary/5 bg-background max-sm:rounded-none rounded-full items-center justify-center border p-px text-foreground/5 bg-[size:8px_8px] bg-top-left bg-[image:repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]">
+                                    {icon && React.isValidElement(icon) ? React.cloneElement(icon as ReactElement<SVGProps<SVGSVGElement>>,) : null}
+                                    {!icon && image && (
+                                        <Image
+                                            src={image}
+                                            width={32}
+                                            height={32}
+                                            alt={title}
+                                            className="size-6 p-0.5 border border-foreground/10 max-sm:rounded-none rounded-full"
+                                        />
+                                    )}
+                                    <span className="text-xs text-foreground">{title}</span>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
