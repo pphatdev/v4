@@ -118,10 +118,14 @@ export const AboutTimeline = () => {
                     Work <span className="text-left bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">Experience</span>
                 </h1>
 
+                <p className="px-4 mt-2 text-start text-foreground/70">
+                    {`With over 5 years of experience in frontend development, I have honed my skills in creating dynamic and user-friendly web applications. My journey has taken me from content writing and UI/UX design to becoming a Senior Frontend Developer at TURBOTECH, where I lead projects that blend technical excellence with innovative design.`}
+                </p>
+
                 <div className="w-full sm:pl-7">
                     <div className="relative max-sm:p-4 sm:pb-12 max-sm:border-t sm:ml-[calc(2rem+1px)] mt-10 md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-68rem))]">
                         <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-foreground/20 sm:block"> </div>
-                        <div className="gap-12">
+                        <div className="flex flex-col gap-12">
                             {experiences.map(({ works, title, companyLogo }, index) => (
                                 <div key={index} className="flex flex-col">
                                     <div className={cn(`flex gap-2 items-center pb-10 md:-translate-x-16`, index === 0 ? "max-sm:mt-0" : "max-sm:mt-10")}>

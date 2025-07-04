@@ -40,6 +40,6 @@ export const AUTHOR_POSITIONS = ["Senior Front-end Developer.", "UI/UX Designer.
 
 export const APP_NAME = "Sophat LEAT";
 export const APP_SHORT_NAME = "PPhat";
-export const APP_DESCRIPTION = "Hello! I'm Sophat LEAT, also known as PPhat, and I'm thrilled to have you here. This portfolio showcases my journey, projects, and passions as a developer and creator. Explore my work, check out my skills, and feel free to connect if you'd like to collaborate or learn more.\nLet's build something amazing together!"
+export const APP_DESCRIPTION = "Hello! I'm Sophat LEAT, also known as PPhat, a Senior Frontend Developer and UI/UX Designer with 5+ years of experience crafting exceptional digital experiences. I specialize in transforming complex ideas into elegant, user-centered solutions using modern web technologies like React, Next.js, and TypeScript. Explore my portfolio to discover innovative projects, technical expertise, and my passion for creating pixel-perfect interfaces. Let's collaborate and build something amazing together!"
 export const NEXT_PUBLIC_APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://pphat.top"
 export const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || ""

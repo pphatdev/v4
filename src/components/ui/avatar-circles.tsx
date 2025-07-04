@@ -33,10 +33,9 @@ const AvatarCircles: React.FC<AvatarCirclesProps> = ({
                 >
                     <div className="relative hover:z-50 transition-all hover:scale-110 h-10 w-10">
                         <Image
-                            className="rounded-full max-sm:rounded-none border-2 border-foreground/10"
+                            className="rounded-full object-cover max-sm:rounded-none border-2 border-foreground/10"
                             src={url.imageUrl}
                             fill
-                            sizes="40px"
                             alt={`Avatar ${url?.title ?? ''} ?? ""`}
                         />
                     </div>

@@ -16,7 +16,7 @@ export const metadata = {
         ]
     },
     title: "Sophat LEAT (PPhat) - Senior Frontend Developer & UI/UX Designer",
-    description: "Senior Frontend Developer at TURBOTECH with 5+ years experience in React, Next.js, TypeScript. Freelance UI/UX Designer creating modern web applications. Available for hire.",
+    description: "Experienced Senior Frontend Developer at TURBOTECH with 5+ years crafting exceptional digital experiences. Specializing in React, Next.js, TypeScript, and modern web technologies. Available for freelance UI/UX design projects.",
     keywords: [
         "Sophat LEAT",
         "PPhat",

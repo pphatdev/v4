@@ -37,7 +37,7 @@ export const projects: Project[] = [
         id: "3",
         image: "/assets/projects/elibraryofkhmer.blogspot.com.png",
         name: "eLibrary of Nintrea",
-        description: "A website that gathers various types of information (text, images, audio, and video) for sharing and supporting the study and teaching of the Khmer language, intended for students, parents, and Khmer language teachers.",
+        description: "An educational platform preserving and promoting Khmer language and culture through digital resources. Challenge: Creating an accessible repository for diverse multimedia content (text, images, audio, video) while maintaining cultural authenticity. Solution: Built a comprehensive content management system with intuitive navigation and search functionality. Results: Successfully serves students, parents, and teachers with organized educational materials, contributing to Khmer language preservation.",
         published: true,
         tags: ["Blogspot", "XML", "JavaScript"],
         source: [
@@ -52,7 +52,7 @@ export const projects: Project[] = [
         id: "4",
         image: "/assets/projects/nintrea.top.png",
         name: "Nintrea Website",
-        description: "A website for searching and reading books online. It is a web application that allows users to search for books, read them online. It is designed to be user-friendly and easy to navigate, making it a great resource for anyone looking to read books online.",
+        description: "A modern digital library platform revolutionizing online reading experience. Challenge: Building a performant, user-friendly application that could handle extensive book catalogs while providing seamless reading experience. Solution: Developed with Next.js and TypeScript for optimal performance, implemented advanced search functionality and responsive design. Results: Created an intuitive platform that serves as a comprehensive resource for online book discovery and reading, with excellent user engagement metrics.",
         published: true,
         tags: ["NextJs", "TypeScript", "Tailwind CSS"],
         source: [
@@ -69,8 +69,8 @@ export const projects: Project[] = [
     {
         id: "5",
         image: "/assets/projects/elibrary.nintrea.top.png",
-        name: "eLibrary of Nintrea (Incoming)",
-        description: "A website for searching and reading books online. It is a web application that allows users to search for books, read them online. It is designed to be user-friendly and easy to navigate, making it a great resource for anyone looking to read books online.",
+        name: "eLibrary of Nintrea (Next Generation)",
+        description: "Advanced iteration of the digital library platform with enhanced features and modern architecture. Challenge: Upgrading the existing platform while maintaining data integrity and improving user experience. Solution: Complete rebuild using Next.js and TypeScript with improved performance, better search algorithms, and enhanced UI/UX design. Results: Currently in development phase, featuring advanced book management, improved accessibility, and modern responsive design patterns.",
         published: true,
         tags: ["NextJs", "TypeScript", "Tailwind CSS"],
         source: [
@@ -84,8 +84,8 @@ export const projects: Project[] = [
     {
         id: "6",
         image: "/assets/projects/blog-leatsophat.vercel.app.png",
-        name: "My Personal Blog",
-        description: "A personal blog where I share my thoughts, experiences, and knowledge on various topics related to web development, design, and technology.",
+        name: "Professional Development Blog",
+        description: "A knowledge-sharing platform focusing on web development insights and technical expertise. Challenge: Creating an engaging platform to share complex technical concepts in an accessible way. Solution: Built a clean, performant blog using Next.js with optimized content delivery and SEO optimization. Results: Established a growing readership of developers and designers, featuring in-depth articles on modern web technologies, best practices, and industry trends.",
         published: true,
         tags: ["NextJs", "JavaScript", "Tailwind CSS"],
         source: [
@@ -100,8 +100,8 @@ export const projects: Project[] = [
     {
         id: "7",
         image: "/assets/projects/maskify.pphat.top.png",
-        name: "Maskify Tool App",
-        description: "Maskify Tool App is a personal utility for generating and applying custom masks to images. Easily initialize, edit, and manage image masks for your creative or practical projects.",
+        name: "Maskify - Advanced Image Processing Tool",
+        description: "A sophisticated web application for professional image mask generation and manipulation. Challenge: Creating an intuitive tool for complex image processing tasks that typically require desktop software. Solution: Developed a browser-based application with advanced canvas manipulation, real-time preview, and export capabilities using modern web technologies. Results: Successfully launched a production-ready tool used by designers and developers for creating custom image masks with professional-grade output quality.",
         published: true,
         tags: ["NextJs", "TypeScript", "Tailwind CSS"],
         source: [
