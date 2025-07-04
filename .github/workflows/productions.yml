@@ -27,5 +27,6 @@ jobs:
             git pull
             npm install
             npm run build
-            pm2 restart all
+            pm2 restart v4
+            pm2 reload v4
           EOF
