@@ -4,6 +4,7 @@ import { ProjectsSection } from './sections/projects';
 import { metadata as meta } from './data/meta';
 import { AboutTimeline } from './sections/timeline';
 import { Footer } from '@/components/ui/footer';
+import { AboutMeSection } from './sections/home-aboutme';
 
 export const metadata: Metadata = meta
 
@@ -14,8 +15,9 @@ export default function HomePage() {
             <div className="fixed inset-0 z-0 pointer-events-none bg-[linear-gradient(to_bottom,transparent_0%,hsl(var(--background))_90%),radial-gradient(ellipse_at_center,transparent_40%,hsl(var(--primary-foreground))_95%)]"></div>
             <main className="max-lg:pt-0 h-full relative text-foreground min-h-screen">
                 <HomeHeroSection />
-                <ProjectsSection />
+                <AboutMeSection />
                 <AboutTimeline />
+                <ProjectsSection />
             </main>
 
             <Footer />
