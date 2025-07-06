@@ -7,10 +7,11 @@ import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils";
 import { NextJSIcon } from "@/components/icons/nextjs";
 import { CompaniesProps } from "@/lib/interfaces/skills";
+import { Badge } from "@/components/ui/badge";
 
 export const AboutTimeline = () => {
 
-    const experiences: CompaniesProps[]  = [
+    const experiences: CompaniesProps[] = [
         {
             title: "TURBOTECH CO., LTD",
             logo: "assets/brands/org/turbotech.png",
@@ -78,7 +79,7 @@ export const AboutTimeline = () => {
                         { title: "Sass", image: "assets/brands/language/sass.svg" },
                         { title: "Bootstrap", image: "assets/brands/language/bootstrap.svg" },
                         { title: "React", image: "assets/brands/language/react.svg" },
-                        { title: "Next.js", icon: <NextJSIcon className="size-6 stroke-1 text-foreground/90"/> },
+                        { title: "Next.js", icon: <NextJSIcon className="size-6 stroke-1 text-foreground/90" /> },
                         { title: "Nuxt.js", image: "assets/brands/language/nuxtjs.svg" },
                         { title: "EJS", image: "assets/brands/language/ejs.svg" },
                         { title: "PHP", image: "assets/brands/language/php.svg" },
@@ -116,6 +117,8 @@ export const AboutTimeline = () => {
             className='z-50 relative max-sm:py-0 bg-gradient-to-b from-background to-transparent backdrop-blur-[2px] w-full py-10'>
 
             <div className="mx-auto max-w-6xl w-full sm:px-4 sm:my-10">
+
+                <Badge variant="outline" className='py-1.5 px-3'>Experience</Badge>
                 <h1 className="w-full py-3 px-4 bg-background/80 max-sm:border-b sticky z-50 top-0 max-md:text-3xl text-4xl text-start tracking-tighter font-bold font-sans">
                     Work <span className="text-left bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-sky-500 via-teal-500 to-green-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">Experience</span>
                 </h1>
