@@ -1,13 +1,11 @@
 "use client";
 import React, { useEffect, useRef, useState, useCallback, forwardRef, useImperativeHandle, useMemo, } from 'react';
-import { Announcing } from '@/app/(web)/(home)/sections/announcing';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent, type Transition, type VariantLabels, type TargetAndTransition, type Variants, } from 'framer-motion';
 import { Profile } from '@/app/(web)/(home)/sections/profile';
-import { MagneticArea } from '@/components/magnetic-aria';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 import { ThemeToggle } from '@/components/ui/theme-switch';
 import TechStack from '@/components/tech-stack';
+import { ContactBar } from './contact-bar';
 
 interface RotatingTextRef {
     next: () => void;
@@ -445,6 +443,7 @@ const HomeHeroSection: React.FC = () => {
         <>
             <canvas ref={canvasRef} className="absolute inset-0 z-[-1] w-full overflow-hidden pointer-events-none opacity-80" />
             <div className='w-full max-w-6xl sticky flex-grow flex flex-col items-start justify-start mx-auto px-1 md:px-14 md:pt-28 lg:px-4 h-full max-sm:pb-5 pb-14 z-10'>
+                <ContactBar />
                 <div className='flex gap-5 max-lg:items-center max-lg:flex-col items-start w-full justify-between max-sm:border max-sm:pb-4 max-sm:mt-1'>
                     <div className='w-full max-sm:text-center flex flex-col max-w-4xl'>
                         {/* <Announcing className='w-full max-lg:text-center max-md:mt-10 max-sm:order-1 order-0' /> */}
@@ -536,9 +535,9 @@ const HomeHeroSection: React.FC = () => {
 
                     </div>
 
-                    <MagneticArea className='max-xs:scale-100 shrink-0 max-lg:order-first max-sm:size-52 my-2 w-80 items-center justify-center'>
+                    <div className='max-xs:scale-100 relative inline-flex shrink-0 max-lg:order-first max-sm:size-52 my-2 w-96 items-center justify-center'>
                         <Profile />
-                    </MagneticArea>
+                    </div>
                 </div>
                 <div className='hidden sm:block w-full'>
                     <TechStack />

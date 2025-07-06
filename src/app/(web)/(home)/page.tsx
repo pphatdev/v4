@@ -5,6 +5,7 @@ import { metadata as meta } from './data/meta';
 import { AboutTimeline } from './sections/timeline';
 import { Footer } from '@/components/ui/footer';
 import { AboutMeSection } from './sections/home-aboutme';
+import { ContactBar } from './sections/contact-bar';
 
 export const metadata: Metadata = meta
 
@@ -19,7 +20,6 @@ export default function HomePage() {
                 <AboutTimeline />
                 <ProjectsSection />
             </main>
-
             <Footer />
         </>
     );
