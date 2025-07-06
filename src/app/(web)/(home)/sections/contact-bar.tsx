@@ -3,6 +3,7 @@ import { FacebookIcon } from '@/components/icons/facebook';
 import { FigmaIcon } from '@/components/icons/figma';
 import { GitHubIcon } from '@/components/icons/github';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export const ContactBar = () => {
 
@@ -19,13 +20,13 @@ export const ContactBar = () => {
             className='flex-col flex absolute max-sm:right-3 right-0 max-sm:top-3 top-1/4'>
             <ol className='items-center flex flex-col gap-5'>
                 <li>
-                    <a href=""> <FacebookIcon className='size-6 text-foreground/50 hover:text-foreground' /> </a>
+                    <Link href="https://fb.me/chat.leatsophat" target='_blank'> <FacebookIcon className='size-6 text-foreground/50 hover:text-foreground' /> </Link>
                 </li>
                 <li>
-                    <a href=""> <GitHubIcon className='size-6 text-foreground/50 hover:text-foreground' /> </a>
+                    <Link href="https://github.com/pphatdev" target='_blank'> <GitHubIcon className='size-6 text-foreground/50 hover:text-foreground' /> </Link>
                 </li>
                 <li>
-                    <a href=""> <FigmaIcon className='stroke-1 size-6 text-foreground/50 hover:text-foreground' /> </a>
+                    <Link href="https://t.me/SophatLEAT" target='_blank'> <FigmaIcon className='stroke-1 size-6 text-foreground/50 hover:text-foreground' /> </Link>
                 </li>
             </ol>
         </motion.div>
