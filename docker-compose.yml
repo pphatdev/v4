@@ -24,7 +24,7 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      - ./nginx/ssl/pphat-first-docker.stackdev.cloud:/etc/nginx/ssl/pphat-first-docker.stackdev.cloud:ro
+      - ./nginx/ssl/v4.stackdev.cloud:/etc/nginx/ssl/v4.stackdev.cloud:ro
     depends_on:
       - app
     networks:

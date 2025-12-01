@@ -67,7 +67,7 @@ cp .env.example .env
 docker compose up -d --build
 ```
 
-3. Access the application at `http://pphat-first-docker.stackdev.cloud` (ensure DNS is configured)
+3. Access the application at `http://v4.stackdev.cloud` (ensure DNS is configured)
 
 ### Docker Commands
 
@@ -89,13 +89,13 @@ docker compose up -d --build --force-recreate
 
 - **Dockerfile**: Multi-stage build for optimized Next.js production image
 - **docker-compose.yml**: Orchestrates the Next.js app and nginx services
-- **nginx/conf.d/pphat-first-docker.stackdev.cloud.conf**: nginx configuration with `server_name pphat-first-docker.stackdev.cloud`
+- **nginx/conf.d/v4.stackdev.cloud.conf**: nginx configuration with `server_name v4.stackdev.cloud`
 
 ### SSL Configuration
 
 To enable HTTPS:
-1. Add your SSL certificates to `nginx/ssl/pphat-first-docker.stackdev.cloud/`
-2. Uncomment the SSL configuration in `nginx/conf.d/pphat-first-docker.stackdev.cloud.conf`
+1. Add your SSL certificates to `nginx/ssl/v4.stackdev.cloud/`
+2. Uncomment the SSL configuration in `nginx/conf.d/v4.stackdev.cloud.conf`
 3. Restart the nginx container
 
 ---
