@@ -89,11 +89,14 @@ docker compose up -d --build --force-recreate
 
 - **Dockerfile**: Multi-stage build for optimized Next.js production image
 - **docker-compose.yml**: Orchestrates the Next.js app and nginx services
-- **nginx/conf.d/default.conf**: nginx configuration with `server_name pphat-first-docker.stackdev.cloud`
+- **nginx/conf.d/pphat-first-docker.stackdev.cloud.conf**: nginx configuration with `server_name pphat-first-docker.stackdev.cloud`
 
 ### SSL Configuration
 
-To enable HTTPS, uncomment the SSL configuration in `nginx/conf.d/default.conf` and mount your SSL certificates.
+To enable HTTPS:
+1. Add your SSL certificates to `nginx/ssl/pphat-first-docker.stackdev.cloud/`
+2. Uncomment the SSL configuration in `nginx/conf.d/pphat-first-docker.stackdev.cloud.conf`
+3. Restart the nginx container
 
 ---
 
