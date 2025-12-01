@@ -46,6 +46,55 @@ This command will:
 - Create an optimized production build
 - Start the production server
 
+## 🐳 Docker Deployment
+
+This project includes Docker configuration for containerized deployment with nginx as a reverse proxy.
+
+### Prerequisites for Docker
+
+- **Docker** (version 20.10 or higher)
+- **Docker Compose** (version 2.0 or higher)
+
+### Quick Start with Docker
+
+1. Copy the environment file:
+```shell
+cp .env.example .env
+```
+
+2. Build and start the containers:
+```shell
+docker compose up -d --build
+```
+
+3. Access the application at `http://pphat-first-docker.stackdev.cloud` (ensure DNS is configured)
+
+### Docker Commands
+
+```shell
+# Build and start containers
+docker compose up -d --build
+
+# View logs
+docker compose logs -f
+
+# Stop containers
+docker compose down
+
+# Rebuild and restart
+docker compose up -d --build --force-recreate
+```
+
+### Configuration
+
+- **Dockerfile**: Multi-stage build for optimized Next.js production image
+- **docker-compose.yml**: Orchestrates the Next.js app and nginx services
+- **nginx/conf.d/default.conf**: nginx configuration with `server_name pphat-first-docker.stackdev.cloud`
+
+### SSL Configuration
+
+To enable HTTPS, uncomment the SSL configuration in `nginx/conf.d/default.conf` and mount your SSL certificates.
+
 ---
 
 **💡 Quick Tip:** The development server includes TypeScript type checking and React Fast Refresh for an improved developer experience.
